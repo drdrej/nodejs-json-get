@@ -1,0 +1,211 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'publish' ]
+2 info using npm@1.3.11
+3 info using node@v0.10.20
+4 verbose node symlink C:\Program Files\nodejs\\node.exe
+5 verbose publish [ '.' ]
+6 verbose cache add [ '.', null ]
+7 verbose cache add name=undefined spec="." args=[".",null]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: '.',
+8 verbose parsed url   path: '.',
+8 verbose parsed url   href: '.' }
+9 silly lockFile 3a52ce78- .
+10 verbose lock . C:\Users\asiebert\AppData\Roaming\npm-cache\3a52ce78-.lock
+11 verbose tar pack [ 'C:\\Users\\asiebert\\AppData\\Local\\Temp\\npm-5672-plvgW9vW\\1391798548731-0.9527943981811404\\tmp.tgz',
+11 verbose tar pack   '.' ]
+12 verbose tarball C:\Users\asiebert\AppData\Local\Temp\npm-5672-plvgW9vW\1391798548731-0.9527943981811404\tmp.tgz
+13 verbose folder .
+14 silly lockFile 1f1177db-tar tar://.
+15 verbose lock tar://. C:\Users\asiebert\AppData\Roaming\npm-cache\1f1177db-tar.lock
+16 silly lockFile f254a459-48731-0-9527943981811404-tmp-tgz tar://C:\Users\asiebert\AppData\Local\Temp\npm-5672-plvgW9vW\1391798548731-0.9527943981811404\tmp.tgz
+17 verbose lock tar://C:\Users\asiebert\AppData\Local\Temp\npm-5672-plvgW9vW\1391798548731-0.9527943981811404\tmp.tgz C:\Users\asiebert\AppData\Roaming\npm-cache\f254a459-48731-0-9527943981811404-tmp-tgz.lock
+18 silly lockFile 1f1177db-tar tar://.
+19 silly lockFile 1f1177db-tar tar://.
+20 silly lockFile f254a459-48731-0-9527943981811404-tmp-tgz tar://C:\Users\asiebert\AppData\Local\Temp\npm-5672-plvgW9vW\1391798548731-0.9527943981811404\tmp.tgz
+21 silly lockFile f254a459-48731-0-9527943981811404-tmp-tgz tar://C:\Users\asiebert\AppData\Local\Temp\npm-5672-plvgW9vW\1391798548731-0.9527943981811404\tmp.tgz
+22 verbose tar unpack C:\Users\asiebert\AppData\Local\Temp\npm-5672-plvgW9vW\1391798548731-0.9527943981811404\tmp.tgz
+23 silly lockFile 34c37e98-48731-0-9527943981811404-package tar://C:\Users\asiebert\AppData\Local\Temp\npm-5672-plvgW9vW\1391798548731-0.9527943981811404\package
+24 verbose lock tar://C:\Users\asiebert\AppData\Local\Temp\npm-5672-plvgW9vW\1391798548731-0.9527943981811404\package C:\Users\asiebert\AppData\Roaming\npm-cache\34c37e98-48731-0-9527943981811404-package.lock
+25 silly lockFile f254a459-48731-0-9527943981811404-tmp-tgz tar://C:\Users\asiebert\AppData\Local\Temp\npm-5672-plvgW9vW\1391798548731-0.9527943981811404\tmp.tgz
+26 verbose lock tar://C:\Users\asiebert\AppData\Local\Temp\npm-5672-plvgW9vW\1391798548731-0.9527943981811404\tmp.tgz C:\Users\asiebert\AppData\Roaming\npm-cache\f254a459-48731-0-9527943981811404-tmp-tgz.lock
+27 silly gunzTarPerm modes [ '755', '644' ]
+28 silly gunzTarPerm extractEntry package.json
+29 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+30 silly gunzTarPerm extractEntry README.md
+31 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+32 silly gunzTarPerm extractEntry LICENSE
+33 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+34 silly gunzTarPerm extractEntry api.js
+35 silly gunzTarPerm modified mode [ 'api.js', 438, 420 ]
+36 silly gunzTarPerm extractEntry .idea/.name
+37 silly gunzTarPerm modified mode [ '.idea/.name', 438, 420 ]
+38 silly gunzTarPerm extractEntry .idea/encodings.xml
+39 silly gunzTarPerm modified mode [ '.idea/encodings.xml', 438, 420 ]
+40 silly gunzTarPerm extractEntry .idea/misc.xml
+41 silly gunzTarPerm modified mode [ '.idea/misc.xml', 438, 420 ]
+42 silly gunzTarPerm extractEntry .idea/modules.xml
+43 silly gunzTarPerm modified mode [ '.idea/modules.xml', 438, 420 ]
+44 silly gunzTarPerm extractEntry .idea/nodejs-json-get.iml
+45 silly gunzTarPerm modified mode [ '.idea/nodejs-json-get.iml', 438, 420 ]
+46 silly gunzTarPerm extractEntry .idea/scopes/scope_settings.xml
+47 silly gunzTarPerm modified mode [ '.idea/scopes/scope_settings.xml', 438, 420 ]
+48 silly gunzTarPerm extractEntry .idea/vcs.xml
+49 silly gunzTarPerm modified mode [ '.idea/vcs.xml', 438, 420 ]
+50 silly gunzTarPerm extractEntry .idea/workspace.xml
+51 silly gunzTarPerm modified mode [ '.idea/workspace.xml', 438, 420 ]
+52 silly gunzTarPerm extractEntry test/test_asString.js
+53 silly gunzTarPerm modified mode [ 'test/test_asString.js', 438, 420 ]
+54 silly lockFile 34c37e98-48731-0-9527943981811404-package tar://C:\Users\asiebert\AppData\Local\Temp\npm-5672-plvgW9vW\1391798548731-0.9527943981811404\package
+55 silly lockFile 34c37e98-48731-0-9527943981811404-package tar://C:\Users\asiebert\AppData\Local\Temp\npm-5672-plvgW9vW\1391798548731-0.9527943981811404\package
+56 silly lockFile f254a459-48731-0-9527943981811404-tmp-tgz tar://C:\Users\asiebert\AppData\Local\Temp\npm-5672-plvgW9vW\1391798548731-0.9527943981811404\tmp.tgz
+57 silly lockFile f254a459-48731-0-9527943981811404-tmp-tgz tar://C:\Users\asiebert\AppData\Local\Temp\npm-5672-plvgW9vW\1391798548731-0.9527943981811404\tmp.tgz
+58 verbose tar pack [ 'C:\\Users\\asiebert\\AppData\\Roaming\\npm-cache\\json-get\\0.1.0\\package.tgz',
+58 verbose tar pack   'C:\\Users\\asiebert\\AppData\\Local\\Temp\\npm-5672-plvgW9vW\\1391798548731-0.9527943981811404\\package' ]
+59 verbose tarball C:\Users\asiebert\AppData\Roaming\npm-cache\json-get\0.1.0\package.tgz
+60 verbose folder C:\Users\asiebert\AppData\Local\Temp\npm-5672-plvgW9vW\1391798548731-0.9527943981811404\package
+61 silly lockFile 34c37e98-48731-0-9527943981811404-package tar://C:\Users\asiebert\AppData\Local\Temp\npm-5672-plvgW9vW\1391798548731-0.9527943981811404\package
+62 verbose lock tar://C:\Users\asiebert\AppData\Local\Temp\npm-5672-plvgW9vW\1391798548731-0.9527943981811404\package C:\Users\asiebert\AppData\Roaming\npm-cache\34c37e98-48731-0-9527943981811404-package.lock
+63 silly lockFile 7b4ffdb4-cache-json-get-0-1-0-package-tgz tar://C:\Users\asiebert\AppData\Roaming\npm-cache\json-get\0.1.0\package.tgz
+64 verbose lock tar://C:\Users\asiebert\AppData\Roaming\npm-cache\json-get\0.1.0\package.tgz C:\Users\asiebert\AppData\Roaming\npm-cache\7b4ffdb4-cache-json-get-0-1-0-package-tgz.lock
+65 silly lockFile 34c37e98-48731-0-9527943981811404-package tar://C:\Users\asiebert\AppData\Local\Temp\npm-5672-plvgW9vW\1391798548731-0.9527943981811404\package
+66 silly lockFile 34c37e98-48731-0-9527943981811404-package tar://C:\Users\asiebert\AppData\Local\Temp\npm-5672-plvgW9vW\1391798548731-0.9527943981811404\package
+67 silly lockFile 7b4ffdb4-cache-json-get-0-1-0-package-tgz tar://C:\Users\asiebert\AppData\Roaming\npm-cache\json-get\0.1.0\package.tgz
+68 silly lockFile 7b4ffdb4-cache-json-get-0-1-0-package-tgz tar://C:\Users\asiebert\AppData\Roaming\npm-cache\json-get\0.1.0\package.tgz
+69 silly lockFile 8322ca33-npm-cache-json-get-0-1-0-package C:\Users\asiebert\AppData\Roaming\npm-cache\json-get\0.1.0\package
+70 verbose lock C:\Users\asiebert\AppData\Roaming\npm-cache\json-get\0.1.0\package C:\Users\asiebert\AppData\Roaming\npm-cache\8322ca33-npm-cache-json-get-0-1-0-package.lock
+71 silly lockFile 8322ca33-npm-cache-json-get-0-1-0-package C:\Users\asiebert\AppData\Roaming\npm-cache\json-get\0.1.0\package
+72 silly lockFile 8322ca33-npm-cache-json-get-0-1-0-package C:\Users\asiebert\AppData\Roaming\npm-cache\json-get\0.1.0\package
+73 verbose tar unpack C:\Users\asiebert\AppData\Roaming\npm-cache\json-get\0.1.0\package.tgz
+74 silly lockFile d78f7fa5-npm-cache-json-get-0-1-0-package tar://C:\Users\asiebert\AppData\Roaming\npm-cache\json-get\0.1.0\package
+75 verbose lock tar://C:\Users\asiebert\AppData\Roaming\npm-cache\json-get\0.1.0\package C:\Users\asiebert\AppData\Roaming\npm-cache\d78f7fa5-npm-cache-json-get-0-1-0-package.lock
+76 silly lockFile 7b4ffdb4-cache-json-get-0-1-0-package-tgz tar://C:\Users\asiebert\AppData\Roaming\npm-cache\json-get\0.1.0\package.tgz
+77 verbose lock tar://C:\Users\asiebert\AppData\Roaming\npm-cache\json-get\0.1.0\package.tgz C:\Users\asiebert\AppData\Roaming\npm-cache\7b4ffdb4-cache-json-get-0-1-0-package-tgz.lock
+78 silly gunzTarPerm modes [ '755', '644' ]
+79 silly gunzTarPerm extractEntry package.json
+80 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+81 silly gunzTarPerm extractEntry README.md
+82 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+83 silly gunzTarPerm extractEntry LICENSE
+84 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+85 silly gunzTarPerm extractEntry api.js
+86 silly gunzTarPerm modified mode [ 'api.js', 438, 420 ]
+87 silly gunzTarPerm extractEntry .idea/.name
+88 silly gunzTarPerm modified mode [ '.idea/.name', 438, 420 ]
+89 silly gunzTarPerm extractEntry .idea/encodings.xml
+90 silly gunzTarPerm modified mode [ '.idea/encodings.xml', 438, 420 ]
+91 silly gunzTarPerm extractEntry .idea/misc.xml
+92 silly gunzTarPerm modified mode [ '.idea/misc.xml', 438, 420 ]
+93 silly gunzTarPerm extractEntry .idea/modules.xml
+94 silly gunzTarPerm modified mode [ '.idea/modules.xml', 438, 420 ]
+95 silly gunzTarPerm extractEntry .idea/nodejs-json-get.iml
+96 silly gunzTarPerm modified mode [ '.idea/nodejs-json-get.iml', 438, 420 ]
+97 silly gunzTarPerm extractEntry .idea/scopes/scope_settings.xml
+98 silly gunzTarPerm modified mode [ '.idea/scopes/scope_settings.xml', 438, 420 ]
+99 silly gunzTarPerm extractEntry .idea/vcs.xml
+100 silly gunzTarPerm modified mode [ '.idea/vcs.xml', 438, 420 ]
+101 silly gunzTarPerm extractEntry .idea/workspace.xml
+102 silly gunzTarPerm modified mode [ '.idea/workspace.xml', 438, 420 ]
+103 silly gunzTarPerm extractEntry test/test_asString.js
+104 silly gunzTarPerm modified mode [ 'test/test_asString.js', 438, 420 ]
+105 silly lockFile d78f7fa5-npm-cache-json-get-0-1-0-package tar://C:\Users\asiebert\AppData\Roaming\npm-cache\json-get\0.1.0\package
+106 silly lockFile d78f7fa5-npm-cache-json-get-0-1-0-package tar://C:\Users\asiebert\AppData\Roaming\npm-cache\json-get\0.1.0\package
+107 silly lockFile 7b4ffdb4-cache-json-get-0-1-0-package-tgz tar://C:\Users\asiebert\AppData\Roaming\npm-cache\json-get\0.1.0\package.tgz
+108 silly lockFile 7b4ffdb4-cache-json-get-0-1-0-package-tgz tar://C:\Users\asiebert\AppData\Roaming\npm-cache\json-get\0.1.0\package.tgz
+109 verbose chmod C:\Users\asiebert\AppData\Roaming\npm-cache\json-get\0.1.0\package.tgz 644
+110 silly chown skipping for windows C:\Users\asiebert\AppData\Roaming\npm-cache\json-get\0.1.0\package.tgz
+111 silly lockFile 3a52ce78- .
+112 silly lockFile 3a52ce78- .
+113 silly publish { name: 'json-get',
+113 silly publish   version: '0.1.0',
+113 silly publish   description: 'simplifies json access',
+113 silly publish   main: 'api.js',
+113 silly publish   directories: { test: 'test' },
+113 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+113 silly publish   repository:
+113 silly publish    { type: 'git',
+113 silly publish      url: 'https://github.com/drdrej/nodejs-json-get.git' },
+113 silly publish   author: { name: 'drdrej' },
+113 silly publish   license: 'MIT',
+113 silly publish   bugs: { url: 'https://github.com/drdrej/nodejs-json-get/issues' },
+113 silly publish   dependencies: { underscore: '~1.5.2' },
+113 silly publish   readme: 'nodejs-json-get\r\n===============\r\n\r\nsimple lib simplifies access to elements in json.\r\n',
+113 silly publish   readmeFilename: 'README.md',
+113 silly publish   _id: 'json-get@0.1.0',
+113 silly publish   dist: { shasum: '68e8191ce7d6aa80912278e5776b704c47e5ff33' },
+113 silly publish   _from: '.' }
+114 verbose url raw json-get
+115 verbose url resolving [ 'https://registry.npmjs.org/', './json-get' ]
+116 verbose url resolved https://registry.npmjs.org/json-get
+117 info trying registry request attempt 1 at 19:42:28
+118 http PUT https://registry.npmjs.org/json-get
+119 http 409 https://registry.npmjs.org/json-get
+120 verbose url raw json-get
+121 verbose url resolving [ 'https://registry.npmjs.org/', './json-get' ]
+122 verbose url resolved https://registry.npmjs.org/json-get
+123 info trying registry request attempt 1 at 19:42:29
+124 http GET https://registry.npmjs.org/json-get
+125 http 200 https://registry.npmjs.org/json-get
+126 verbose uploading [ 'json-get/-/json-get-0.1.0.tgz/-rev/13-185b1375b191308f1aaa6909537170e4',
+126 verbose uploading   'C:\\Users\\asiebert\\AppData\\Roaming\\npm-cache\\json-get\\0.1.0\\package.tgz' ]
+127 verbose url raw json-get/-/json-get-0.1.0.tgz/-rev/13-185b1375b191308f1aaa6909537170e4
+128 verbose url resolving [ 'https://registry.npmjs.org/',
+128 verbose url resolving   './json-get/-/json-get-0.1.0.tgz/-rev/13-185b1375b191308f1aaa6909537170e4' ]
+129 verbose url resolved https://registry.npmjs.org/json-get/-/json-get-0.1.0.tgz/-rev/13-185b1375b191308f1aaa6909537170e4
+130 info trying registry request attempt 1 at 19:42:29
+131 http PUT https://registry.npmjs.org/json-get/-/json-get-0.1.0.tgz/-rev/13-185b1375b191308f1aaa6909537170e4
+132 http 403 https://registry.npmjs.org/json-get/-/json-get-0.1.0.tgz/-rev/13-185b1375b191308f1aaa6909537170e4
+133 info trying registry request attempt 1 at 19:42:31
+134 http PUT https://registry.npmjs.org/json-get/-/json-get-0.1.0.tgz/-rev/13-185b1375b191308f1aaa6909537170e4
+135 http 400 https://registry.npmjs.org/json-get/-/json-get-0.1.0.tgz/-rev/13-185b1375b191308f1aaa6909537170e4
+136 verbose bad json <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+136 verbose bad json <html><head>
+136 verbose bad json <title>400 Bad Request</title>
+136 verbose bad json </head><body>
+136 verbose bad json <h1>Bad Request</h1>
+136 verbose bad json <p>Your browser sent a request that this server could not understand.<br />
+136 verbose bad json </p>
+136 verbose bad json </body></html>
+137 error registry error parsing json
+138 error publish Error uploading package
+139 error SyntaxError: Unexpected token <
+139 error <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+139 error <html><head>
+139 error <title>400 Bad Request</title>
+139 error </head><body>
+139 error <h1>Bad Request</h1>
+139 error <p>Your browser sent a request that this server could not understand.<br />
+139 error </p>
+139 error </body></html>
+139 error
+139 error     at Object.parse (native)
+139 error     at RegClient.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:238:23)
+139 error     at Request.self.callback (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:129:22)
+139 error     at Request.EventEmitter.emit (events.js:98:17)
+139 error     at Request.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:873:14)
+139 error     at Request.EventEmitter.emit (events.js:117:20)
+139 error     at IncomingMessage.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:824:12)
+139 error     at IncomingMessage.EventEmitter.emit (events.js:117:20)
+139 error     at _stream_readable.js:920:16
+139 error     at process._tickCallback (node.js:415:13)
+140 error If you need help, you may report this log at:
+140 error     <http://github.com/isaacs/npm/issues>
+140 error or email it to:
+140 error     <npm-@googlegroups.com>
+141 error System Windows_NT 6.1.7601
+142 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "publish"
+143 error cwd C:\home\projects\nodejs-json-get\public\nodejs-json-get
+144 error node -v v0.10.20
+145 error npm -v 1.3.11
+146 error type unexpected_token
+147 verbose exit [ 1, true ]

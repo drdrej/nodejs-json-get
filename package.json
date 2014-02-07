@@ -1,0 +1,24 @@
+{
+  "name": "json-get",
+  "version": "0.1.0",
+  "description": "simplifies json access",
+  "main": "api.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/drdrej/nodejs-json-get.git"
+  },
+  "author": "drdrej",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/drdrej/nodejs-json-get/issues"
+  },
+  "dependencies": {
+    "underscore": "~1.5.2"
+  }
+}
