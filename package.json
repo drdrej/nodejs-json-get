@@ -1,5 +1,5 @@
 {
-  "name": "json-get",
+  "name": "json-tools",
   "version": "0.1.0",
   "description": "simplifies json access",
   "main": "api.js",

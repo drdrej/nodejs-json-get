@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43da5df5-e8ba-4bda-8d98-b0ce46f0483b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/test_asString.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <ignored path="nodejs-json-get.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,7 +40,7 @@
       <file leaf-file-name="package.json" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="17" selection-start="41" selection-end="41" vertical-scroll-proportion="0.058721934">
+            <state line="18" column="45" selection-start="432" selection-end="440" vertical-scroll-proportion="0.5284974">
               <folding />
             </state>
           </provider>
@@ -271,7 +270,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="17" selection-start="41" selection-end="41" vertical-scroll-proportion="0.058721934">
+        <state line="18" column="45" selection-start="432" selection-end="440" vertical-scroll-proportion="0.5284974">
           <folding />
         </state>
       </provider>
