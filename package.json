@@ -1,6 +1,6 @@
 {
   "name": "json-tools",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "simplifies json access",
   "main": "api.js",
   "directories": {
@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "underscore": "~1.5.2",
-    "JSONSelect": "~0.4.0"
+    "JSONSelect": "~0.4.0",
+    "string": "~1.8.0"
   }
 }
