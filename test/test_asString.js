@@ -13,6 +13,18 @@ describe('query search/apotheke', function () {
         done();
     });
 
+    it( "string to trimmed string", function (done) {
+        var api = require( "../api.js");
+        var result = api.asText( " test ", {
+            trim: true
+        });
+
+        assert.ok( result );
+        assert.equal( result, "test" );
+
+        done();
+    });
+
     it( "array of strings to string", function (done) {
         var api = require( "../api.js");
         var result = api.asText( ["test", "has", "lines"] );

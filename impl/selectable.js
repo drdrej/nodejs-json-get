@@ -26,14 +26,15 @@ exports.selectable =  function (json) {
     return {
         json: json,
 
-        text: function (path, defVal) {
+        text: function (path, defVal, shouldTrim) {
             var select = require('JSONSelect');
             var selected = select.match(path, this.json);
             var concat = require("../api.js").asText;
 
             if( defVal ) {
                 return concat(selected, {
-                    defaultVal: defVal
+                    defaultVal: defVal,
+                    trim: shouldTrim
                 });
             } else {
                 return concat(selected);

@@ -12,8 +12,9 @@
  */
 exports.asText = function (value, options) {
     var _ = require('underscore');
+    var conf = options;
 
-    var trimmed = function( value ) {
+    var trimmed = function( value, options ) {
         if( options && options.trim ) {
             var S = require( "string" );
             return S(value).trim();
@@ -27,7 +28,7 @@ exports.asText = function (value, options) {
     }
 
     if (_.isString(value)) {
-        return trimmed(value);
+        return trimmed(value, options);
     }
 
     if (_.isArray(value)) {
@@ -37,7 +38,7 @@ exports.asText = function (value, options) {
             rval += entry ? entry : "";
         });
 
-        return trimmed(rval);
+        return trimmed(rval, options);
     }
 
     console.log("-- couldn't convert value to string: %j", value);
