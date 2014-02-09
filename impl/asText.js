@@ -45,5 +45,5 @@ exports.asText = function (value, options) {
     if (options && options.defaultVal)
         return options.defaultVal;
 
-    return;
+    return "";
 };
