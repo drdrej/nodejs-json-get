@@ -30,5 +30,8 @@ exports.asText = function (value, options) {
     }
 
     console.log("-- couldn't convert value to string: %j", value);
-    return options.defaultVal;
+    if (options && options.defaultVal)
+        return options.defaultVal;
+
+    return
 };
