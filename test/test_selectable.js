@@ -18,6 +18,7 @@ describe('query search/apotheke', function () {
         assert.ok(_.isFunction(result.first));
         assert.ok(_.isFunction(result.text));
         assert.ok(_.isFunction(result.each));
+        assert.ok(_.isFunction(result.exists));
 
 
         var first = result.first( ".test > .name");
@@ -34,6 +35,9 @@ describe('query search/apotheke', function () {
         });
 
         assert.equal( count, 1);
+
+        assert.ok( result.exists( ".test > .name" ));
+
         done();
     });
 

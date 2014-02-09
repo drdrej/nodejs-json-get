@@ -2,28 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43da5df5-e8ba-4bda-8d98-b0ce46f0483b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/impl/asText.js" afterPath="$PROJECT_DIR$/impl/asText.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/impl/selectable.js" afterPath="$PROJECT_DIR$/impl/selectable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_selectable.js" afterPath="$PROJECT_DIR$/test/test_selectable.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="nodejs-json-get.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="43da5df5-e8ba-4bda-8d98-b0ce46f0483b" time="1391964386453" ignored="false" />
+    <file path="/Dummy.txt" changelist="43da5df5-e8ba-4bda-8d98-b0ce46f0483b" time="1391971344981" ignored="false" />
     <file path="/api.js" changelist="43da5df5-e8ba-4bda-8d98-b0ce46f0483b" time="1391959479359" ignored="false" />
     <file path="/test_asString.js" changelist="43da5df5-e8ba-4bda-8d98-b0ce46f0483b" time="1391798397070" ignored="false" />
     <file path="$PROJECT_DIR$/../../../fabriquejs-core/sources/fabrique-js/package.json" changelist="43da5df5-e8ba-4bda-8d98-b0ce46f0483b" time="1391799481607" ignored="false" />
-    <file path="/test_selectable.js" changelist="43da5df5-e8ba-4bda-8d98-b0ce46f0483b" time="1391960929344" ignored="false" />
-    <file path="/selectable.js" changelist="43da5df5-e8ba-4bda-8d98-b0ce46f0483b" time="1391964681611" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../mobile-knappschaft-app/repository/ks-app/node-backend/package.json" changelist="43da5df5-e8ba-4bda-8d98-b0ce46f0483b" time="1391961597847" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../mobile-knappschaft-app/repository/ks-app/node-backend/import/travelinfo/travelinfo.tmpl.html" changelist="43da5df5-e8ba-4bda-8d98-b0ce46f0483b" time="1391963885283" ignored="false" />
-    <file path="/travelinfo.tmpl.html" changelist="43da5df5-e8ba-4bda-8d98-b0ce46f0483b" time="1391963875713" ignored="false" />
+    <file path="/test_selectable.js" changelist="43da5df5-e8ba-4bda-8d98-b0ce46f0483b" time="1391971612206" ignored="false" />
+    <file path="/selectable.js" changelist="43da5df5-e8ba-4bda-8d98-b0ce46f0483b" time="1391971572610" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../mobile-knappschaft-app/repository/ks-app/node-backend/package.json" changelist="43da5df5-e8ba-4bda-8d98-b0ce46f0483b" time="1391965387784" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../mobile-knappschaft-app/repository/ks-app/node-backend/import/travelinfo/travelinfo.tmpl.html" changelist="43da5df5-e8ba-4bda-8d98-b0ce46f0483b" time="1391965010117" ignored="false" />
+    <file path="/travelinfo.tmpl.html" changelist="43da5df5-e8ba-4bda-8d98-b0ce46f0483b" time="1391964999956" ignored="false" />
     <file path="$PROJECT_DIR$/../../../mobile-knappschaft-app/repository/ks-app/node-backend/import/travelinfo/renderInfo.js" changelist="43da5df5-e8ba-4bda-8d98-b0ce46f0483b" time="1391963505779" ignored="false" />
     <file path="/renderInfo.js" changelist="43da5df5-e8ba-4bda-8d98-b0ce46f0483b" time="1391963504651" ignored="false" />
     <file path="$PROJECT_DIR$/../../../mobile-knappschaft-app/repository/ks-app/backbone-frontend/js/sdk/enablePositionTracking.js" changelist="43da5df5-e8ba-4bda-8d98-b0ce46f0483b" time="1391962947355" ignored="false" />
     <file path="$PROJECT_DIR$/../../../mobile-knappschaft-app/repository/ks-app/node-backend/import/ftpTravelInfo.js" changelist="43da5df5-e8ba-4bda-8d98-b0ce46f0483b" time="1391963304964" ignored="false" />
     <file path="/ftpTravelInfo.js" changelist="43da5df5-e8ba-4bda-8d98-b0ce46f0483b" time="1391963303276" ignored="false" />
     <file path="/asText.js" changelist="43da5df5-e8ba-4bda-8d98-b0ce46f0483b" time="1391964482324" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../mobile-knappschaft-app/repository/ks-app/node_modules/json-tools/package.json" changelist="43da5df5-e8ba-4bda-8d98-b0ce46f0483b" time="1391965326511" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +65,7 @@
       <file leaf-file-name="asText.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/impl/asText.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="57" selection-start="142" selection-end="142" vertical-scroll-proportion="0.0">
+            <state line="33" column="33" selection-start="738" selection-end="748" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -73,7 +74,7 @@
       <file leaf-file-name="selectable.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/impl/selectable.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="72" selection-start="612" selection-end="612" vertical-scroll-proportion="0.0">
+            <state line="38" column="38" selection-start="1063" selection-end="1063" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -82,7 +83,7 @@
       <file leaf-file-name="test_selectable.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/test_selectable.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="55" selection-start="592" selection-end="592" vertical-scroll-proportion="0.0">
+            <state line="21" column="36" selection-start="639" selection-end="639" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -118,9 +119,9 @@
         <option value="$PROJECT_DIR$/test/test_asString.js" />
         <option value="$PROJECT_DIR$/impl/selectable/first.js" />
         <option value="$PROJECT_DIR$/api.js" />
-        <option value="$PROJECT_DIR$/test/test_selectable.js" />
         <option value="$PROJECT_DIR$/impl/asText.js" />
         <option value="$PROJECT_DIR$/impl/selectable.js" />
+        <option value="$PROJECT_DIR$/test/test_selectable.js" />
         <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
@@ -319,6 +320,13 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/test/test_asString.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="77" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/api.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="46" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0">
@@ -382,20 +390,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_asString.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="77" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_selectable.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="55" selection-start="592" selection-end="592" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="46" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0">
@@ -403,16 +397,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_asString.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="77" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/impl/asText.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="57" selection-start="142" selection-end="142" vertical-scroll-proportion="0.0">
+        <state line="33" column="33" selection-start="738" selection-end="748" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/impl/selectable.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="72" selection-start="612" selection-end="612" vertical-scroll-proportion="0.0">
+        <state line="38" column="38" selection-start="1063" selection-end="1063" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_selectable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="36" selection-start="639" selection-end="639" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>

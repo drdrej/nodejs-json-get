@@ -26,12 +26,25 @@ exports.selectable =  function (json) {
     return {
         json: json,
 
-        text: function (path) {
+        text: function (path, defVal) {
             var select = require('JSONSelect');
             var selected = select.match(path, this.json);
             var concat = require("../api.js").asText;
 
-            return concat(selected);
+            if( defVal ) {
+                return concat(selected, {
+                    defaultVal: defVal
+                });
+            } else {
+                return concat(selected);
+            }
+        },
+
+        exists: function (path) {
+            var select = require('JSONSelect');
+            var selected = select.match(path, this.json);
+
+            return (selected && selected.length && selected.length > 0);
         },
 
         first: function (path) {
