@@ -2,13 +2,141 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43da5df5-e8ba-4bda-8d98-b0ce46f0483b" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/expr_simple-false.output" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/.gitmodules" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/JSONSelect.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_1/basic.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/basic.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_1/basic_first-child.output" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_1/basic_first-child.selector" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_1/basic_grouping.output" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_1/basic_grouping.selector" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/basic_has-multiple.output" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/basic_has-multiple.selector" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/basic_has-root-in-expr.output" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/basic_has-root-in-expr.selector" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/basic_has-sans-first-paren.output" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/basic_has-sans-first-paren.selector" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/basic_has-sans-paren.output" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/basic_has-sans-paren.selector" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/basic_has-whitespace.output" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/basic_has-whitespace.selector" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/basic_has-with-comma.output" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/basic_has-with-comma.selector" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/basic_has.output" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/basic_has.selector" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_1/basic_id.output" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_1/basic_id.selector" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_1/basic_id_multiple.output" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_1/basic_id_multiple.selector" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_1/basic_id_quotes.output" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_1/basic_id_quotes.selector" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_1/basic_id_with_type.output" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_1/basic_id_with_type.selector" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_1/basic_last-child.output" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_1/basic_last-child.selector" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/basic_multiple-has-with-strings.output" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/basic_multiple-has-with-strings.selector" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_1/basic_nth-child-2.output" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_1/basic_nth-child-2.selector" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_1/basic_nth-child.output" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_1/basic_nth-child.selector" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_1/basic_nth-last-child.output" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_1/basic_nth-last-child.selector" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_1/basic_root_pseudo.output" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_1/basic_root_pseudo.selector" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_1/basic_type.output" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_1/basic_type.selector" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_1/basic_type2.output" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_1/basic_type2.selector" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_1/basic_type3.output" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_1/basic_type3.selector" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_1/basic_universal.output" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_1/basic_universal.selector" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_1/collision.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_1/collision_nested.output" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_1/collision_nested.selector" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_1/collision_quoted-string.output" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_1/collision_quoted-string.selector" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_1/collision_string.output" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_1/collision_string.selector" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/js/conf_tests.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/conformance_tests.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/js/doctest.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/js/doctest.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/expr.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/expr_div.output" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/expr_div.selector" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/expr_ends-with.output" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/expr_ends-with.selector" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/expr_false-eq.output" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/expr_false-eq.selector" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/expr_greater-than.output" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/expr_greater-than.selector" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/expr_less-than.output" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/expr_less-than.selector" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/expr_mod.output" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/expr_mod.selector" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/expr_mult.output" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/expr_mult.selector" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/expr_null-eq.output" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/expr_null-eq.selector" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/expr_number-eq.output" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/expr_number-eq.selector" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/expr_precedence-1.output" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/expr_precedence-1.selector" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/expr_precedence-2.output" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/expr_precedence-2.selector" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/expr_simple-false.selector" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/expr_simple.output" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/expr_simple.selector" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/expr_starts-with.output" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/expr_starts-with.selector" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/expr_string-eq.output" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/expr_string-eq.selector" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/expr_true-eq.output" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/expr_true-eq.selector" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/js/jquery-1.6.1.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/jsonselect.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/lex_test.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/match_test.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/parse_test.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/polykids.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/polykids_has-with_descendant.output" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/polykids_has-with_descendant.selector" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/polykids_val.output" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_3/polykids_val.selector" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/run.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/impl/selectable.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_2/sibling.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_2/sibling_childof.output" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_2/sibling_childof.selector" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_2/sibling_descendantof.output" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_2/sibling_descendantof.selector" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_2/sibling_unrooted.output" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/tests/level_2/sibling_unrooted.selector" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/JSONSelect/src/test/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/test_selectable.js" />
+      <change type="DELETED" beforePath="C:\home\projects\nodejs-json-get\public\nodejs-json-get\npm-debug.log" afterPath="" />
+      <change type="MOVED" beforePath="C:\home\projects\nodejs-json-get\public\nodejs-json-get\api.js" afterPath="$PROJECT_DIR$/impl/asText.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api.js" afterPath="$PROJECT_DIR$/api.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="nodejs-json-get.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="43da5df5-e8ba-4bda-8d98-b0ce46f0483b" time="1391797343938" ignored="false" />
-    <file path="/api.js" changelist="43da5df5-e8ba-4bda-8d98-b0ce46f0483b" time="1391798097324" ignored="false" />
+    <file path="/Dummy.txt" changelist="43da5df5-e8ba-4bda-8d98-b0ce46f0483b" time="1391958589824" ignored="false" />
+    <file path="/api.js" changelist="43da5df5-e8ba-4bda-8d98-b0ce46f0483b" time="1391959479359" ignored="false" />
     <file path="/test_asString.js" changelist="43da5df5-e8ba-4bda-8d98-b0ce46f0483b" time="1391798397070" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../fabriquejs-core/sources/fabrique-js/package.json" changelist="43da5df5-e8ba-4bda-8d98-b0ce46f0483b" time="1391799481607" ignored="false" />
+    <file path="/test_selectable.js" changelist="43da5df5-e8ba-4bda-8d98-b0ce46f0483b" time="1391960929344" ignored="false" />
+    <file path="/selectable.js" changelist="43da5df5-e8ba-4bda-8d98-b0ce46f0483b" time="1391960754825" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,19 +156,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="api.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="api.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="46" selection-start="298" selection-end="298" vertical-scroll-proportion="0.0">
+            <state line="5" column="46" selection-start="104" selection-end="104" vertical-scroll-proportion="0.14049587">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/package.json">
+      <file leaf-file-name="asText.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/impl/asText.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="45" selection-start="432" selection-end="440" vertical-scroll-proportion="0.5284974">
+            <state line="10" column="0" selection-start="218" selection-end="218" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="selectable.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/impl/selectable.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="65" selection-start="1287" selection-end="1287" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_selectable.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test_selectable.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="55" selection-start="592" selection-end="592" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -74,8 +220,12 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/test/test_asString.js" />
-        <option value="$PROJECT_DIR$/api.js" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/impl/selectable/first.js" />
+        <option value="$PROJECT_DIR$/impl/asText.js" />
+        <option value="$PROJECT_DIR$/api.js" />
+        <option value="$PROJECT_DIR$/impl/selectable.js" />
+        <option value="$PROJECT_DIR$/test/test_selectable.js" />
       </list>
     </option>
   </component>
@@ -143,6 +293,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nodejs-json-get" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nodejs-json-get" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -150,6 +314,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\home\projects\nodejs-json-get\public\nodejs-json-get\test" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
@@ -175,22 +344,22 @@
     <frame x="-4" y="-4" width="1374" height="776" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24944155" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -254,13 +423,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/test_asString.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="77" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="46" selection-start="298" selection-end="298" vertical-scroll-proportion="0.0">
@@ -270,7 +432,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="45" selection-start="432" selection-end="440" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_asString.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="77" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="45" selection-start="432" selection-end="440" vertical-scroll-proportion="0.5284974">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_asString.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="77" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/impl/selectable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="65" selection-start="1287" selection-end="1287" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_selectable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="55" selection-start="592" selection-end="592" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/impl/asText.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="218" selection-end="218" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="46" selection-start="104" selection-end="104" vertical-scroll-proportion="0.14049587">
           <folding />
         </state>
       </provider>

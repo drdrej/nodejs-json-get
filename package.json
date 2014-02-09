@@ -19,6 +19,7 @@
     "url": "https://github.com/drdrej/nodejs-json-get/issues"
   },
   "dependencies": {
-    "underscore": "~1.5.2"
+    "underscore": "~1.5.2",
+    "JSONSelect": "~0.4.0"
   }
 }
