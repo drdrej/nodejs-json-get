@@ -25,10 +25,9 @@ In the next step you need to load the npm-module.
 ```
 
 Now you can work with these json-tools. The tools-instance provides some methods to work with json:
-1. asText( value, options)
-2. selectable( object )
+     1. asText( value, options)
+     2. selectable( object )
 
-For example you have a
 
 F.e. if you like to make a selection on JSON-Object, then you need to create a selectable and then you can use css-selectors to querying a structure.
 
