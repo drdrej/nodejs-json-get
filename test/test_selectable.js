@@ -1,7 +1,7 @@
 var assert = require("assert");
 var _ = require("underscore");
 
-describe('query search/apotheke', function () {
+describe('Test selectable() function for a simple element', function () {
 
     it( "creates selectable.", function (done) {
         var api = require( "../api.js");

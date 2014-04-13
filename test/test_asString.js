@@ -1,7 +1,7 @@
 var assert = require("assert");
 var _ = require("underscore");
 
-describe('query search/apotheke', function () {
+describe('Test asString() function', function () {
 
     it( "string to string", function (done) {
         var api = require( "../api.js");
