@@ -42,24 +42,42 @@ exports.query =  function (json) {
 
     return {
         json: json,
+        current: streams,
+
+        use : function( stream ) {
+            this.current.pipe( stream );
+            this.current = stream;
+
+            // streams.pipe(selectable(json, path));
+            // this.streams.push(selectable(json, path));
+        },
 
         select: function (path) {
             var selectable = require( './io/select.js').select;
-            streams.pipe(selectable(json, path));
+            this.use(selectable(json, path));
 
             return this;
         },
 
         transform: function( fnc ) {
             var transformator = require( './io/transform.js').transform;
-            streams.pipe(transformator(fnc));
+            this.use(transformator(fnc));
 
             return this;
         },
 
         finished: function( done ) {
             var finished = require( './io/finished.js').finished;
-            streams.pipe( finished(done) );
+            this.use( finished(done) );
+        },
+
+        run: function() {
+           /*
+            var _ = require( 'undescore' );
+            _.each( this.streams, function( stream ) {
+
+            });
+            */
         },
 
         dump: function( pathTmpl ) {
