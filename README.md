@@ -15,7 +15,9 @@ it should help to do some basic tasks with json-structure like rendering, select
 
 First of all you need to install an npm module.
 
-     >npm install json
+```
+     > npm install json-tools
+```
      
 In the next step you need to load the npm-module.
 
@@ -24,17 +26,22 @@ In the next step you need to load the npm-module.
 
 ```
 
-Now you can work with these json-tools. The tools-instance provides some methods to work with json:
+Now you can work with these json-tools. A tools-instance provides some methods to work with json:
+
      1. asText( value, options)
      2. selectable( object )
+     3. each( fnc )
+     4. query( json )
 
-
-F.e. if you like to make a selection on JSON-Object, then you need to create a selectable and then you can use css-selectors to querying a structure.
+F.e. if you like to make a selection on JSON-Object, then you need to create a selectable
+and then you can use css-selectors to querying a structure.
 
 **Example:** 
 ```javascript
    var myObj = {
-      root: [
+      root: {
+         persons : [
+
        {
           name: "xyz",
           age: 13 
@@ -49,16 +56,16 @@ F.e. if you like to make a selection on JSON-Object, then you need to create a s
           name: "cde",
           age: 33 
        }  
-   ]};
+   ]}};
 
    // creates a selectable:
    var selectable = tools.selectable( myObj );
    
    // return the first element in the result:
-   console.log( selectable.first( ".root > *" ) );
+   console.log( selectable.first( ".root > .persons > *" ) );
    
    // return string/text of a selection
-   console.log( selectable.text( ".root > * > .name" ) );
+   console.log( selectable.text( ".root > .persons > * > .name" ) );
 
 ```
 
@@ -67,7 +74,7 @@ You can also iterate over selection in callback-style.
 **Example:** 
 ```javascript
 
-   selectable.each( ".root > *", function(element) {
+   selectable.each( ".root > .persons > *", function(element) {
         // passed "element" is also a selectable.
         // so you have same methods in selected element (text, first, each)
         
@@ -79,7 +86,6 @@ You can also iterate over selection in callback-style.
    
         // access to json-sub-structure:
         console.log( element.text( ".name" ) );
-        
    });
 
 ```
