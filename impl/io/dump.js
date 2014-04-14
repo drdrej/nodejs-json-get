@@ -20,6 +20,14 @@ exports.dump = function( path ) {
             var realPath = _.template(path, data);
             var json = JSON.stringify(data, null, 4);
 
+            var pathUtil = require( 'path' );
+            var dir = pathUtil.dirname( realPath );
+            if( !fs.existsSync(dir) ) {
+                console.log( "[## INFO] path not exists. creates path: " + dir );
+                var wrench = require( 'wrench' );
+                wrench.mkdirSyncRecursive(dir, 0777);
+            }
+
             fs.writeFileSync(realPath, json);
 
             /*

@@ -28,7 +28,7 @@ describe('test api.query().', function () {
 
                 return data;
             })
-            .dump( "c:\\temp\\<%= name %>.json" )
+            .dump( "c:\\temp\\test-json\\<%= name %>.json" )
             .finished(done);
     });
 
