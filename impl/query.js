@@ -38,20 +38,32 @@ exports.query =  function (json) {
         return DEFAULT_NOOP_QUERY;
     }
 
+    var  streams = require( 'event-stream' );
+
     return {
         json: json,
 
-        first: function (path) {
-            var select = require('JSONSelect');
-            var selected = select.match(path, this.json);
+        select: function (path) {
+            var selectable = require( './io/select.js').select;
+            streams.pipe(selectable(json, path));
 
-            var hasFirstValue = (selected && selected.length && selected.length > 0);
-            if(  hasFirstValue ) {
-                return selected[0];
-            }
+            return this;
+        },
 
-            return;
+        transform: function( fnc ) {
+            var transformator = require( './io/transform.js').transform;
+            streams.pipe(transformator(fnc));
+
+            return this;
+        },
+
+        finished: function( done ) {
+            var finished = require( './io/finished.js').finished;
+            streams.pipe( finished(done) );
+        },
+
+        dump: function( pathTmpl ) {
+
         }
-
     };
 };

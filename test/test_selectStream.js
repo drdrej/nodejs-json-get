@@ -5,7 +5,7 @@ describe('test selectable stream of json sub-objects.', function () {
 
     it( "select simple entry in json by stream.", function (done) {
 
-        var select = require( '../impl/io/selectStream.js').select;
+        var select = require( '../impl/io/select.js').select;
         var stream = select( {
             "test" : {
                 "name" : "test"

@@ -17,4 +17,6 @@ exports.check =  function (json, msg) {
 
         return json;
     }
+
+    return true;
 };
