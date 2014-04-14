@@ -116,6 +116,20 @@ and transform() functions.
    });
 ```
 
+You can easyly dump a json-element to a file like in the following example:
+
+```javascript
+   var tools = require( 'json-tools' );
+   tools.query( json )
+        .select( '.root > .persons > *' )
+        .transform( function( element ){
+               ...
+        })
+        .dump( "c:\\temp\\test\\<%= name %>.json" );
+```
+
+In the above example dump-function will use the passed path-template and json-data
+to render the path and dump json-data into this file.
 
 
 ## License
@@ -123,5 +137,4 @@ This project is open-source and is distributed under MIT License (check the LICE
 
 
 
-write code & have fun!
-   A. Siebert
+write code & have fun! ---- A. Siebert
