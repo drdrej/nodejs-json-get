@@ -7,7 +7,7 @@ it should help to do some basic tasks with json-structure like rendering, select
 
 
      development: active
-     version: 0.2.5
+     version: 0.2.6
      author: A.siebert (drdrej)
      
 
@@ -85,8 +85,7 @@ You can also iterate over selection in callback-style.
 ```
 
 Good to know, that you can also use the each() method on selected element.
-
-**Example:** 
+**Example:**
 ```javascript
 
    selectable.each( query, function(element) {
@@ -96,6 +95,28 @@ Good to know, that you can also use the each() method on selected element.
    });
 
 ```
+
+### Transformations
+
+API supports now transformations. To exec a transformation you need to create a query object and call select()
+and transform() functions.
+
+**Example:**
+```javascript
+
+   var tools = require( 'json-tools' );
+   tools.query( json )
+        .select( '.root > .persons > *' )
+        . transform( function( element ){
+               // do some transformation with element
+               var result = ...
+
+               // returns transformed element.
+               return result;
+   });
+```
+
+
 
 ## License
 This project is open-source and is distributed under MIT License (check the LICENSE-file).
