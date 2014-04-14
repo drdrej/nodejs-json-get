@@ -21,20 +21,15 @@ describe('test api.query().', function () {
                 }
             ]
         })
-            .select( " .persons > * > .name " )
+            .select( " .persons > * " )
             .transform(function (data) {
                 console.log( "## next data element." );
                 console.log(data);
 
                 return data;
             })
+            .dump( "c:\\temp\\<%= name %>.json" )
             .finished(done);
-
-        //    .dump( "./" )
-
-
-            // assert.equal(counter, 1);
-        //});
     });
 
 });

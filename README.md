@@ -107,7 +107,7 @@ and transform() functions.
    var tools = require( 'json-tools' );
    tools.query( json )
         .select( '.root > .persons > *' )
-        . transform( function( element ){
+        .transform( function( element ){
                // do some transformation with element
                var result = ...
 

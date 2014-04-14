@@ -14,18 +14,7 @@
 var DEFAULT_NOOP_QUERY = {
     select : function( inputQuery ) {
         console.log( "[## SKIP] query: " + inputQuery);
-
-        return {
-            transform : function( fnc ) {
-                console.log( "[## SKIP] transform() for query: " + inputQuery );
-
-                return {
-                    insert : function( outputQuery ) {
-                        console.log( "[## SKIP] () for query: " + outputQuery);
-                    }
-                }
-            }
-        }
+        return;
     }
 };
 
@@ -47,9 +36,6 @@ exports.query =  function (json) {
         use : function( stream ) {
             this.current.pipe( stream );
             this.current = stream;
-
-            // streams.pipe(selectable(json, path));
-            // this.streams.push(selectable(json, path));
         },
 
         select: function (path) {
@@ -69,19 +55,16 @@ exports.query =  function (json) {
         finished: function( done ) {
             var finished = require( './io/finished.js').finished;
             this.use( finished(done) );
+
+            this.current = null;
         },
 
-        run: function() {
-           /*
-            var _ = require( 'undescore' );
-            _.each( this.streams, function( stream ) {
 
-            });
-            */
-        },
+        dump: function( path ) {
+            var dump = require( './io/dump.js').dump;
+            this.use( dump(path) );
 
-        dump: function( pathTmpl ) {
-
+            return this;
         }
     };
 };
