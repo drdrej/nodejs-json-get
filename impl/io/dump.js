@@ -18,6 +18,9 @@ exports.dump = function( path ) {
         function write(data) {
             // dump before forward :::
             var realPath = _.template(path, data);
+
+            console.log( " ### path rendered( %j )", realPath );
+
             var json = JSON.stringify(data, null, 4);
 
             var pathUtil = require( 'path' );
@@ -29,17 +32,6 @@ exports.dump = function( path ) {
             }
 
             fs.writeFileSync(realPath, json);
-
-            /*
-            , function(err) {
-                if(err) {
-                    console.log(err);
-                    return;
-                }
-
-                console.log("[## INFO] JSON saved to: " + realPath);
-            }
-            */
 
             this.emit('data', data );
         },

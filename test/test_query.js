@@ -28,6 +28,14 @@ describe('test api.query().', function () {
 
                 return data;
             })
+
+            /*  rendert mit Hilfe des geschickten Objekts ein Template. :
+             *  ergebnis ist ein content-Objekt.
+             *
+             *  creates a field $rendered in original object.
+             */
+            .render( "this is embedded text. Hello <%= name %>!", "$rendered" )
+
             .dump( "c:\\temp\\test-json\\<%= name %>.json" )
             .finished(done);
     });

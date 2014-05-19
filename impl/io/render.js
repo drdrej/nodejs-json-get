@@ -21,7 +21,7 @@
  *
  *
  * @param path should be an absolute path or path-template.
- * @param field if string -> passed field name to store rendered result.
+ * @param field [optional] if string -> passed field name to store rendered result.
  *
  * @returns {*} stream to render
  */
@@ -30,25 +30,39 @@ exports.render = function( template, field ) {
     var streams = require('event-stream');
     var fs = require( 'fs' );
 
+    if( !template || !_.isString(template) ) {
+        console.log("[## ERROR] wrong argument 'template'. Is not a string." );
+        return;
+    }
+
+    var S = require( 'string' );
+
+    function loadTmpl(template) {
+       return fs.readFileSync(template);
+    }
+
+
 
     return streams.through(
 
         function write(data) {
-            // if( data && isObject(data) )
-
-            // dump before forward :::
-            var rendered = _.template(template, data);
+            var tmpl = S(template).startsWith( "file://" ) ? loadTmpl(template) : template;
+            var rendered = _.template(tmpl, data);
 
             if( !field ) {
+                console.log(" --- has no field param: " + field);
+
                 this.emit('data', rendered );
+                return;
             }
 
-            if( _.has(data, field) ) {
+            if(_.isString(field) && _.has(data, field) ) {
                 console.log( "[## WARN] overwrite field data." + field + " with new value. Old value is { value : " + data[field] + "}." );
             }
 
             data[field] = rendered;
-            this.emit('data', rendered );
+
+            this.emit('data', data );
         },
 
         function end () {

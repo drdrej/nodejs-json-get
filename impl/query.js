@@ -59,6 +59,12 @@ exports.query =  function (json) {
             this.current = null;
         },
 
+        render: function( template, field ) {
+            var render = require( './io/render.js').render;
+            this.use( render( template, field ) );
+
+            return this;
+        },
 
         dump: function( path ) {
             var dump = require( './io/dump.js').dump;
