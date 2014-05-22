@@ -1,7 +1,7 @@
 {
   "name": "json-tools",
-  "version": "0.2.6",
-  "description": "simplifies json access",
+  "version": "0.2.7",
+  "description": "library to work with json",
   "main": "api.js",
   "directories": {
     "test": "test"
