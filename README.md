@@ -122,7 +122,7 @@ and transform() functions.
    });
 ```
 
-You can easyly dump a json-element to a file like in the following example:
+You can easyly render and dump a json-element to a file like in the following example:
 
 ```javascript
    var tools = require( 'json-tools' );
@@ -136,6 +136,25 @@ You can easyly dump a json-element to a file like in the following example:
 
 In the above example dump-function will use the passed path-template and json-data
 to render the path and dump json-data into this file.
+
+
+
+
+### Render content
+
+```javascript
+   var tools = require( 'json-tools' );
+   tools.query( json )
+        .select( '.root > .persons > *' )
+        .transform( function( element ){
+               ...
+        })
+        .render( 'test content rendered with <%= name %> and wrote to field $rendered', '$rendered' )
+```
+
+In this example the render()-function creates field named $rendered in passed object, and fill this field with rendered value, based on passed template and object (in the stream).
+
+
 
 
 ## License
