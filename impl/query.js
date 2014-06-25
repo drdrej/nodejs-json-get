@@ -39,36 +39,50 @@ exports.query =  function (json) {
         },
 
         select: function (path) {
-            var selectable = require( './io/select.js').select;
+            var selectable = require( './io/select.js').exec;
             this.use(selectable(json, path));
 
             return this;
         },
 
         transform: function( fnc ) {
-            var transformator = require( './io/transform.js').transform;
+            var transformator = require( './io/transform.js').exec;
             this.use(transformator(fnc));
 
             return this;
         },
 
         finished: function( done ) {
-            var finished = require( './io/finished.js').finished;
+            var finished = require( './io/finished.js').exec;
             this.use( finished(done) );
 
             this.current = null;
         },
 
         render: function( template, field ) {
-            var render = require( './io/render.js').render;
+            var render = require( './io/render.js').exec;
             this.use( render( template, field ) );
 
             return this;
         },
 
         dump: function( path ) {
-            var dump = require( './io/dump.js').dump;
+            var dump = require( './io/dump.js').exec;
             this.use( dump(path) );
+
+            return this;
+        },
+
+        asArray: function( ) {
+            var fnc = require( './io/asArray.js').exec;
+            this.use( fnc() );
+
+            return this;
+        },
+
+        validate: function( validateFnc, skipIfBroken ) {
+            var fnc = require( './io/validate.js').exec;
+            this.use( fnc(validateFnc, skipIfBroken) );
 
             return this;
         }

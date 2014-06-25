@@ -10,15 +10,20 @@ exports.exec = function( fnc, params ) {
 
     if (!params) {
         return fnc();
-    } else if(_.isArray(params) ) {
-        return fnc();
-
-        /*
-        for(i = 0; i <= params.length; i++) {
-
-        }
-        */
     } else {
         return fnc( params );
     }
 };
+
+/*
+
+ TODO: evtl. behandlung für arrays einbauen ...
+ else if(_.isArray(params) ) {
+ return fnc(params);
+
+
+ for(i = 0; i <= params.length; i++) {
+
+ }
+
+ */

@@ -3,7 +3,7 @@
  * @param done function
  * @returns {*}
  */
-exports.finished = function( done ) {
+exports.exec = function( done ) {
     var streams = require('event-stream');
 
     return streams.through(function write(data) {

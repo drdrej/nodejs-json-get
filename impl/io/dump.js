@@ -8,7 +8,7 @@
  * @param path should be an absolute path or path-template.
  * @returns {*}
  */
-exports.dump = function( path ) {
+exports.exec = function( path ) {
     var _ = require( 'underscore' );
     var streams = require('event-stream');
     var fs = require( 'fs' );

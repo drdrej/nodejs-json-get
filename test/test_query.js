@@ -40,4 +40,44 @@ describe('test api.query().', function () {
             .finished(done);
     });
 
+
+    it("select -> transform -> . (2)", function (done) {
+        var query = require('../api.js').query;
+
+        query({
+            persons: [
+                {
+                    name: "AAA"
+                },
+
+                {
+                    name: "BBB"
+                },
+
+                {
+                    name: "CCC"
+                }
+            ]
+        })
+            .select( " .persons > * " )
+            .transform(function (data) {
+                console.log( "## next data element." );
+                console.log(data);
+
+                return data;
+            })
+            .asArray()
+            .validate( function( element ) {
+                if( !_.isArray(element) ) {
+                    done( "ERROR!!!" );
+                    return false;
+                }
+
+                return true;
+            })
+            .finished(done);
+    });
 });
+
+
+

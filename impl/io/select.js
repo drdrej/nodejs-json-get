@@ -10,7 +10,7 @@
  * this function creates a readable stream of objects by css-selection.
  * @param path CSS path
  */
-exports.select = function( json, path, after ) {
+exports.exec = function( json, path, after ) {
     var streams = require('event-stream');
     var jsonSelect = require( 'JSONSelect' );
 

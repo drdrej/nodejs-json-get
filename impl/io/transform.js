@@ -1,4 +1,4 @@
-exports.transform = function( transformFnc ) {
+exports.exec = function( transformFnc ) {
     var streams = require('event-stream');
 
     return streams.through(function write(data) {
