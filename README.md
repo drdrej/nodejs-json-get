@@ -7,7 +7,7 @@ it should help to do some basic tasks with json-structure like rendering, select
 
 
      development: active
-     version: 0.2.8
+     version: 0.2.11
      author: A.siebert (drdrej)
      
 
@@ -137,7 +137,40 @@ You can easyly render and dump a json-element to a file like in the following ex
 In the above example dump-function will use the passed path-template and json-data
 to render the path and dump json-data into this file.
 
+Another nice short-cut is a transform( string:path ) and write external transformations.
 
+First of all you can move above used transformation-function to another file. F.e. create a folder **"/transform/"**
+and place this file **"myTransformation.js"** into this folder:
+
+```javascript
+
+   // this is a transformation-file
+   exports.transform = function( element ){
+               ...
+   };
+```
+
+Modify your code  to use this external transformation:
+
+```javascript
+   var tools = require( 'json-tools' );
+   tools.query( json )
+        .select( '.root > .persons > *' )
+        .transform( __dirname + '/transform/myTransformation.js' )
+        .dump( "c:\\temp\\test\\<%= name %>.json" );
+```
+**Important:** current version supports only absolute path and do not check the path-var.
+
+
+### Merge and Split
+
+Sometimes you need to split a passed object into a bunch of objects. you can do it with the split() function
+and asArray() catch a stream of objects and build an array. path this array in the stream to the next handler.
+
+**Important:**  current version of slit() supports only arrays.
+
+
+*TODO: need examples*
 
 
 ### Render content
