@@ -80,6 +80,13 @@ exports.query =  function (json) {
             return this;
         },
 
+        split: function( ) {
+            var fnc = require( './io/split.js').exec;
+            this.use( fnc() );
+
+            return this;
+        },
+
         validate: function( validateFnc, skipIfBroken ) {
             var fnc = require( './io/validate.js').exec;
             this.use( fnc(validateFnc, skipIfBroken) );

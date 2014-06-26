@@ -69,7 +69,45 @@ describe('test api.query().', function () {
             .asArray()
             .validate( function( element ) {
                 if( !_.isArray(element) ) {
-                    done( "ERROR!!!" );
+                    done( "ERROR!!! element must be an raay. because merged asArray" );
+                    return false;
+                }
+
+                return true;
+            })
+            .finished(done);
+    });
+
+    it("select -> transform -> . (3)", function (done) {
+        var query = require('../api.js').query;
+
+        query({
+            persons: [
+                {
+                    name: "AAA"
+                },
+
+                {
+                    name: "BBB"
+                },
+
+                {
+                    name: "CCC"
+                }
+            ]
+        })
+            .select( " .persons > * " )
+            .transform(function (data) {
+                console.log( "## next data element." );
+                console.log(data);
+
+                return data;
+            })
+            .asArray()
+            .split()
+            .validate( function( element ) {
+                if( _.isArray(element) ) {
+                    done( "ERROR!!! Element is An array, but must be splitted ..." );
                     return false;
                 }
 
