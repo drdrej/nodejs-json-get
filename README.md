@@ -7,9 +7,23 @@ it should help to do some basic tasks with json-structure like rendering, select
 
 
      development: active
-     version: 0.2.11
+     version: 0.2.12
      author: A.siebert (drdrej)
 
+## Third-Party Code
+To build this product I've used some open-source stuff:
+* event-stream
+* JSONSelect
+* string
+* underscore
+* wrench
+
+I like to say thank you to authors of this useful stuff!
+
+
+## When and where to use
+
+*TODO:" need to document
 
 ## Usage
 
