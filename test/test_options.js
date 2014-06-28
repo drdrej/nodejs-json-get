@@ -1,7 +1,7 @@
 var assert = require("assert");
 var _ = require("underscore");
 
-describe('test api.query().', function () {
+describe('test passing options', function () {
 
     it("test external transformation: transform( 'path' ) ", function (done) {
         var query = require('../api.js').query;
@@ -20,16 +20,22 @@ describe('test api.query().', function () {
                     name: "CCC"
                 }
             ]
-        })
+        }, {
+               test : true
+            })
             .select(" .persons > * ")
             .transform( function( element, options ) {
                 if( !options.test ) {
                     done( "ERROR: option not found" );
+                    return;
                 }
-            },{
-                test : true
             })
             .finished(done);
+        /*
+            .finished(function(options) {
+                done();
+            });
+            */
     });
 
 });

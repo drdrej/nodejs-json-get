@@ -18,7 +18,7 @@ var DEFAULT_NOOP_QUERY = {
     }
 };
 
-exports.query =  function (json) {
+exports.query =  function (json, options) {
     var _ = require('underscore');
     var isObject = require('./asserts/isObject').check;
 
@@ -45,33 +45,40 @@ exports.query =  function (json) {
             return this;
         },
 
-        transform: function( fnc, options ) {
-            var transformator = require( './io/transform.js').exec;
-            this.use(transformator(fnc, options));
 
-            return this;
-        },
+        // to render
 
-        finished: function( fnc, options ) {
-            var finished = require( './io/finished.js').exec;
-            this.use( finished(fnc, options) );
 
-            this.current = null;
-        },
-
-        render: function( template, field, options ) {
+        render: function( template, field ) {
             var render = require( './io/render.js').exec;
             this.use( render( template, field, options ) );
 
             return this;
         },
 
-        dump: function( path, options ) {
+        dump: function( path ) {
             var dump = require( './io/dump.js').exec;
             this.use( dump(path, options) );
 
             return this;
         },
+
+        // transform & validate
+        transform: function( fnc ) {
+            var transformator = require( './io/transform.js').exec;
+            this.use(transformator(fnc, options));
+
+            return this;
+        },
+
+        validate: function( validateFnc, skipIfBroken ) {
+            var fnc = require( './io/validate.js').exec;
+            this.use( fnc(validateFnc, skipIfBroken, options) );
+
+            return this;
+        },
+
+        // split & merge methods
 
         asArray: function() {
             var fnc = require( './io/asArray.js').exec;
@@ -87,11 +94,13 @@ exports.query =  function (json) {
             return this;
         },
 
-        validate: function( validateFnc, skipIfBroken, options ) {
-            var fnc = require( './io/validate.js').exec;
-            this.use( fnc(validateFnc, skipIfBroken, options) );
 
-            return this;
+        // finalize work.
+        finished: function( fnc ) {
+            var finished = require( './io/finished.js').exec;
+            this.use( finished(fnc) );
+
+            this.current = null;
         }
     };
 };
