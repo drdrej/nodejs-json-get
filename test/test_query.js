@@ -97,7 +97,7 @@ describe('test api.query().', function () {
             ]
         })
             .select( " .persons > * " )
-            .transform(function (data) {
+            .transform(function (data, options) {
                 console.log( "## next data element." );
                 console.log(data);
 
@@ -105,7 +105,7 @@ describe('test api.query().', function () {
             })
             .asArray()
             .split()
-            .validate( function( element ) {
+            .validate( function( element, options ) {
                 if( _.isArray(element) ) {
                     done( "ERROR!!! Element is An array, but must be splitted ..." );
                     return false;

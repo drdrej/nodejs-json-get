@@ -15,6 +15,7 @@ describe('test selectable stream of json sub-objects.', function () {
         var counter = 0;
 
         stream.on('data', function(data) {
+            // TODO: skip undefined
             assert.equal( data, "test" );
             counter++;
         });

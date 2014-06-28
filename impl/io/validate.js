@@ -1,4 +1,4 @@
-exports.exec = function( validFnc, skipIfInvalid ) {
+exports.exec = function( validFnc, skipIfInvalid, options ) {
     var streams = require('event-stream');
 
     return streams.through(function write(data) {
@@ -22,7 +22,8 @@ exports.exec = function( validFnc, skipIfInvalid ) {
             }
 
             console.log( "-- -- %j", data);
-            console.log( "-- is broken: throw exception" );
+
+            throw "ERROR: invalid .";
         },
 
         function end () { //optional

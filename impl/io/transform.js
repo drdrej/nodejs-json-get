@@ -12,7 +12,7 @@ var use = function(transformFnc) {
     }
 };
 
-exports.exec = function( transformFnc ) {
+exports.exec = function( transformFnc, options ) {
     var streams = require('event-stream');
 
     var fnc = use(transformFnc);
@@ -21,7 +21,7 @@ exports.exec = function( transformFnc ) {
             console.log( "use transformation" );
 
             var exec = require( '../asserts/exec.js').exec;
-            var result = exec( fnc, data );
+            var result = exec( fnc, data, options );
 
             this.emit('data', result);
         },

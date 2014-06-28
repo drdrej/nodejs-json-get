@@ -15,6 +15,8 @@ exports.exec = function( json, path, after ) {
     var jsonSelect = require( 'JSONSelect' );
 
     var selected = jsonSelect.match(path, json);
+
+    /*
     var _ = require( 'underscore' );
     var callback = after;
 
@@ -28,4 +30,7 @@ exports.exec = function( json, path, after ) {
             var exec = require( '../asserts/exec.js').exec;
             exec( callback );
         }, true);
+    */
+
+    return streams.readArray( selected );
 };

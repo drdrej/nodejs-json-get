@@ -45,35 +45,35 @@ exports.query =  function (json) {
             return this;
         },
 
-        transform: function( fnc ) {
+        transform: function( fnc, options ) {
             var transformator = require( './io/transform.js').exec;
-            this.use(transformator(fnc));
+            this.use(transformator(fnc, options));
 
             return this;
         },
 
-        finished: function( done ) {
+        finished: function( fnc, options ) {
             var finished = require( './io/finished.js').exec;
-            this.use( finished(done) );
+            this.use( finished(fnc, options) );
 
             this.current = null;
         },
 
-        render: function( template, field ) {
+        render: function( template, field, options ) {
             var render = require( './io/render.js').exec;
-            this.use( render( template, field ) );
+            this.use( render( template, field, options ) );
 
             return this;
         },
 
-        dump: function( path ) {
+        dump: function( path, options ) {
             var dump = require( './io/dump.js').exec;
-            this.use( dump(path) );
+            this.use( dump(path, options) );
 
             return this;
         },
 
-        asArray: function( ) {
+        asArray: function() {
             var fnc = require( './io/asArray.js').exec;
             this.use( fnc() );
 
@@ -87,9 +87,9 @@ exports.query =  function (json) {
             return this;
         },
 
-        validate: function( validateFnc, skipIfBroken ) {
+        validate: function( validateFnc, skipIfBroken, options ) {
             var fnc = require( './io/validate.js').exec;
-            this.use( fnc(validateFnc, skipIfBroken) );
+            this.use( fnc(validateFnc, skipIfBroken, options) );
 
             return this;
         }

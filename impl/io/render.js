@@ -25,7 +25,7 @@
  *
  * @returns {*} stream to render
  */
-exports.exec = function( template, field ) {
+exports.exec = function( template, field, options ) {
     var _ = require( 'underscore' );
     var streams = require('event-stream');
     var fs = require( 'fs' );

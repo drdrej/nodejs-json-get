@@ -22,15 +22,12 @@ describe('test api.query().', function () {
             ]
         })
             .select(" .persons > * ")
-            .transform( __dirname + '/transform/addTestVar.js' )
-            .validate( function(data) {
-                if( data.$test ) {
-                    console.log( "-- transformation executed successful");
-                    return true;
-                } else {
-                    console.log( "ERROR: this data not pass previous transformation!" );
-                    done( "BROKEN VALIDATION!" );
+            .transform( function( element, options ) {
+                if( !options.test ) {
+                    done( "ERROR: option not found" );
                 }
+            },{
+                test : true
             })
             .finished(done);
     });

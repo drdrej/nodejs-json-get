@@ -8,7 +8,7 @@
  * @param path should be an absolute path or path-template.
  * @returns {*}
  */
-exports.exec = function( path ) {
+exports.exec = function( path, options ) {
     var _ = require( 'underscore' );
     var streams = require('event-stream');
     var fs = require( 'fs' );
@@ -17,6 +17,7 @@ exports.exec = function( path ) {
     return streams.through(
         function write(data) {
             // dump before forward :::
+            data.opt = options;
             var realPath = _.template(path, data);
 
             console.log( " ### path rendered( %j )", realPath );

@@ -1,6 +1,6 @@
 
 
-exports.exec = function( fnc, params ) {
+exports.exec = function( fnc, param1, param2, param3, param4, param5, param6 ) {
     var _ = require('underscore');
 
     if (!(fnc && _.isFunction(fnc))) {
@@ -8,11 +8,15 @@ exports.exec = function( fnc, params ) {
         return;
     }
 
-    if (!params) {
+    return fnc( param1, param2, param3, param4, param5, param6);
+
+    /*
+    if (!params1) {
         return fnc();
     } else {
-        return fnc( params );
+        return fnc( param1, param2, param3, param4, param5, param6);
     }
+    */
 };
 
 /*
