@@ -18,6 +18,6 @@ exports.selectable = require( './impl/selectable.js').selectable;
  *
  * @type {query}
  */
-exports.query = require( './impl/query.js' ).query;
+exports.query = require( './impl/pipe.js' ).query;
 
 
