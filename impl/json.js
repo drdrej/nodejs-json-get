@@ -21,18 +21,31 @@ var DEFAULT_NOOP_QUERY = {
 
 var Pipe = require( './Pipe.js').Pipe;
 
+var _ = require('underscore');
 
-exports.query =  function (json, options) {
-    var _ = require('underscore');
+
+var createStream = function( json ) {
+    var  streams = require( 'event-stream' );
     var isObject = require('./asserts/isObject').check;
 
-    if( !isObject(json, "Couldn't query an object-structure.") ) {
-        console.error( "JSON ::: %j", json );
-        return DEFAULT_NOOP_QUERY;
+    if( isObject(json, "Couldn't query an object-structure.") ) {
+        return streams.readArray( [json] );
     }
 
-    var  streams = require( 'event-stream' );
-    var readObj = streams.readArray( [json] );
+    if( _.isArray(json) ) {
+        return streams.readArray( json );
+    }
 
-    return new Pipe(readObj, options);
+    throw "UNSUPPORTED TYPE OF OBJECT: " + json;
+
+};
+
+exports.query =  function (json, options) {
+    if(_.isNull(json) ) {
+        throw "PASSED OBJECT is NULL! Skip pipe.";
+    }
+
+    var stream = createStream( json );
+
+    return new Pipe(stream, options);
 };
