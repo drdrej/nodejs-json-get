@@ -7,7 +7,7 @@ it should help to do some basic tasks with json-structure like rendering, select
 
 
      development: active
-     version: 0.2.12
+     version: 0.2.13
      author: A.siebert (drdrej)
 
 ## Third-Party Code
@@ -202,7 +202,13 @@ and asArray() catch a stream of objects and build an array. path this array in t
 In this example the render()-function creates field named $rendered in passed object, and fill this field with rendered value, based on passed template and object (in the stream).
 
 ## API
-*TODO:* docu!
+
+### asText()
+### selectable
+### json
+
+
+
 
 ## License
 This project is open-source and is distributed under MIT License (check the LICENSE-file).
