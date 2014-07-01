@@ -1,7 +1,7 @@
 var assert = require("assert");
 var _ = require("underscore");
 
-describe('Test: render by stream into file', function () {
+describe('Test: render by stream into file 2', function () {
 
     it("render( tmplPath, outputPath )", function (done) {
 

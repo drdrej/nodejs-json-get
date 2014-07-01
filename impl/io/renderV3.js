@@ -50,6 +50,7 @@ exports.exec = function( template, field ) {
 
             var foundPath = renderPath( field, data );
             if( foundPath ) {
+                console.log( "-- render path: %j", foundPath );
                 var write = require( '../template/writeToFile.js').write;
                 write(foundPath, rendered);
 
@@ -72,11 +73,17 @@ exports.exec = function( template, field ) {
 
 var renderPath = function( path, data ) {
     var _ = require( 'underscore' );
-    var output = _.template(path, data);
-    var pathUtil = require( 'path' );
-    var resolved = pathUtil.resolve( output );
+    var rendered = _.template(path, data);
 
     var isFilePath = require( '../asserts/isFilePath.js').check;
+    var foundPath = isFilePath( rendered );
 
-    return isFilePath( resolved );
+    if( foundPath ) {
+        var pathUtil = require( 'path' );
+        var resolved = pathUtil.normalize( foundPath );
+
+        return resolved;
+    }
+
+    console.log( "[WARN] output is not a path. path = " + path );
 };

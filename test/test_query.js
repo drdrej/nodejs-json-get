@@ -36,7 +36,8 @@ describe('test api.query().', function () {
              */
             .render( "this is embedded text. Hello <%= name %>!", "$rendered" )
 
-            .dump( "c:\\temp\\test-json\\<%= name %>.json" )
+            /* .dump( "c:\\temp\\test-json\\<%= name %>.json" ) */
+            .dump( "test/dumped/<%= name %>.json" )
             .finished(done);
     });
 

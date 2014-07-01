@@ -1,4 +1,5 @@
 
+/*
 var loadTmpl = function (template) {
     var fs = require( 'fs' );
 
@@ -13,8 +14,9 @@ var loadTmpl = function (template) {
 
     return content;
 };
+*/
 
-var prepareTemplate = function( template ) {
+var prepareTemplate = function( template, data ) {
     var _ = require( 'underscore' );
 
     if( !template || !_.isString(template) ) {
@@ -22,9 +24,14 @@ var prepareTemplate = function( template ) {
         return;
     }
 
-    var S = require( 'string' );
-    var asStr = S(template);
-    return asStr.startsWith( "file://" ) ? loadTmpl(template) : template;
+    var isFilePath = require( '../asserts/isFilePath').check;
+    var path = isFilePath(template);
+    if( path ) {
+        var read = require( './readFile' ).read;
+        return read( path, data );
+    }
+
+    return template;
 };
 
 
@@ -38,7 +45,7 @@ var prepareTemplate = function( template ) {
 exports.render = function( template, data ) {
     var _ = require( 'underscore' );
 
-    var tmpl = prepareTemplate(template);
+    var tmpl = prepareTemplate(template, data);
     var rendered = _.template(tmpl, data);
 
     return rendered;
