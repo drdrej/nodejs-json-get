@@ -73,6 +73,11 @@ exports.selectable =  function (json) {
                   var wrapped = exports.selectable(entry);
                   step(wrapped, idx);
             });
+        },
+
+        render: function( template ) {
+            var render = require( './template/renderUnderscore.js').render;
+            return render( template, this,json);
         }
     }
 };

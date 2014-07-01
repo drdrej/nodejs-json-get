@@ -203,11 +203,48 @@ In this example the render()-function creates field named $rendered in passed ob
 
 ## API
 
-### asText()
+### asText
+Extract text from structure.
+
 ### selectable
+Extends passed object with methods to query and render this object.
+
+#### render( template )
+
+This method gives you a way to render object.
+Current implementation uses Underscore.templates.
+
+* **template**: Path underscore-template or path to existing template.
+
+**Example:**
+```javascript
+   var tools = require( 'json-tools' );
+   var selectable = tools.selectable( json );
+   var rendered = selectable.render( '<%= text('.field') %> )
+```
+
+
+
+
+
 ### json
+Creates a stream-pipe and forward passed json-object into this stream.
 
+#### select( String:cssPath )
+#### render( )
+#### done( )
 
+## History
+
+### until version 0.2.12
+- Only basic implementation.
+- Not tested well - need more tests.
+- use it actively in my other projects.
+
+I found in some situations I need to redesign json-tools.
+I've started to change the api(). Release 0.3.x should have a valid and sable api.
+
+### version 0.3.x
 
 
 ## License

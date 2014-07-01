@@ -1,3 +1,5 @@
+// DEPRECATED !!!
+
 /**
  * creates a wrapper to work with complex json-structures.
  *
