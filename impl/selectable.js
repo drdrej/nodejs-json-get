@@ -99,11 +99,15 @@ var doSelection = function (path, obj) {
     if( isValidArguments ) {
         var select = require('JSONSelect');
         return select.match(path, obj);
-    } else {
-        if(_.isArray(obj) )
+    }
+
+    if( !path || !_.isString(path) ) {
+        console.log( "-- no path passed." );
+
+        if (_.isArray(obj))
             return obj;
 
-        if(_.isObject(obj) )
+        if (_.isObject(obj))
             return [obj];
     }
 }

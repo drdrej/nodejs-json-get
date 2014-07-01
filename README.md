@@ -7,7 +7,7 @@ it should help to do some basic tasks with json-structure like rendering, select
 
 
      development: active
-     version: 0.2.15
+     version: 0.2.17
      author: A.siebert (drdrej)
 
 ## Third-Party Code
@@ -231,8 +231,88 @@ Current implementation uses Underscore.templates.
 Creates a stream-pipe and forward passed json-object into this stream.
 
 #### select( String:cssPath )
+
+Selects elements on passed Object. Result is an array of elements. Every element in array will be passed in the pipe to the next stream.
+
+**Parameters**:
+name | types
+CSS-Path | String
+
+
+**Example:**
+```javascript
+   var obj = { ... };
+   var tools = require( 'json-tools' );
+
+   // select a field:
+   var rendered = tools.json( obj ).select('.field' );
+```
+
 #### render( )
 #### done( )
+
+
+
+Pipe.prototype.render = function( template, field ) {
+    var render = require( './io/renderV2.js').exec;
+    this._use( render( template, field ) );
+
+    return this;
+};
+
+Pipe.prototype.dump = function( path ) {
+    var dump = require( './io/dump.js').exec;
+    this._use( dump(path, this.options) );
+
+    return this;
+};
+
+Pipe.prototype.transform = function( fnc ) {
+    var transformator = require( './io/transform.js').exec;
+    this._use(transformator(fnc, this.options));
+
+    return this;
+};
+
+Pipe.prototype.validate = function( validateFnc, skipIfBroken ) {
+    var fnc = require( './io/validate.js').exec;
+    this._use( fnc(validateFnc, skipIfBroken, this.options) );
+
+    return this;
+};
+
+Pipe.prototype.asArray = function() {
+    var fnc = require( './io/asArray.js').exec;
+    this._use( fnc() );
+
+    return this;
+};
+
+Pipe.prototype.asSelectable = function() {
+    var fnc = require( './io/asSelectable.js').exec;
+    this._use( fnc() );
+
+    return this;
+};
+
+Pipe.prototype.split = function( ) {
+    var fnc = require( './io/split.js').exec;
+    this._use( fnc() );
+
+    return this;
+};
+
+/**
+ * @param fnc
+ */
+Pipe.prototype.done = function( fnc ) {
+    var finished = require( './io/finished.js').exec;
+    this._use( finished(fnc) );
+
+    this.current = null;
+};
+
+
 
 ## History
 

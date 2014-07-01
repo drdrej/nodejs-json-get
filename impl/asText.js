@@ -25,23 +25,27 @@ var trimmed = function( str, options ) {
     return str;
 };
 
-
 var concatArray = function( array, options ) {
     var _ = require('underscore');
 
     var rval = "";
-
     _.each(array, function (entry) {
-        rval += entry ? entry : "";
+        rval += concat(entry, options);
     });
 
     return trimmed(rval, options);
 };
 
 var concatObj = function( obj, options ) {
-    console.log( "##ERROR ::: " + obj);
+    var _ = require( 'underscore' );
+    var values = _.values( obj );
 
-    return "---";
+    var rval = "";
+    _.each( values, function( element ) {
+        rval += concat(element, options);
+    });
+
+    return rval;
 };
 
 

@@ -14,8 +14,8 @@ Test with empty text() call:
 (same value as above)
 -----------------------------------------------
 
-   [object Object]
+   AAA
 
-   [object Object]
+   BBB
 
-   [object Object]
+   CCC
