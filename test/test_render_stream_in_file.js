@@ -22,13 +22,8 @@ describe('Test: render by stream into file', function () {
             ]
         })
             .asSelectable()
-
-            /*  rendert mit Hilfe des geschickten Objekts ein Template. :
-             *  ergebnis ist ein content-Objekt.
-             *
-             *  creates a field $rendered in original object.
-             */
             .render( "file://./test/tmpl/test_render_persons.txt.tmpl", "file://./test/rendered/rendered_persons.txt" )
+
             .done(function() {
                 var path = require( 'path' );
                 var fs = require( 'fs' );
