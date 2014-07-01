@@ -7,7 +7,7 @@ it should help to do some basic tasks with json-structure like rendering, select
 
 
      development: active
-     version: 0.2.13
+     version: 0.2.14
      author: A.siebert (drdrej)
 
 ## Third-Party Code
@@ -220,7 +220,7 @@ Current implementation uses Underscore.templates.
 ```javascript
    var tools = require( 'json-tools' );
    var selectable = tools.selectable( json );
-   var rendered = selectable.render( '<%= text('.field') %> )
+   var rendered = selectable.render( "<%= text('.field') %>" )
 ```
 
 
