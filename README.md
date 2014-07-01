@@ -234,9 +234,8 @@ Creates a stream-pipe and forward passed json-object into this stream.
 
 Selects elements on passed Object. Result is an array of elements. Every element in array will be passed in the pipe to the next stream.
 
-**Parameters**:
-name | types
-CSS-Path | String
+##### Parameters:
+* **cssPath** of type String.
 
 
 **Example:**
