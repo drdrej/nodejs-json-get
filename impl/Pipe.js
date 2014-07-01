@@ -18,7 +18,7 @@ Pipe.prototype.select = function( path ) {
 };
 
 Pipe.prototype.render = function( template, field ) {
-    var render = require( './io/renderV2.js').exec;
+    var render = require( './io/renderV3.js').exec;
     this._use( render( template, field ) );
 
     return this;
