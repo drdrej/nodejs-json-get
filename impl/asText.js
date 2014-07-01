@@ -12,50 +12,54 @@
  */
 exports.asText = function (value, options) {
     var _ = require('underscore');
-
-    var trimmed = function( value, options ) {
-        if( options && options.trim ) {
-            var S = require( "string" );
-            return S(value).trim();
-        }
-
-        return value;
-    };
-
-
-    var build = function(value) {
-        if (_.isString(value)) {
-            return trimmed(value, options);
-        }
-
-        if (_.isArray(value)) {
-            var rval = "";
-
-            _.each(value, function (entry) {
-                rval += entry ? entry : "";
-            });
-
-            return trimmed(rval, options);
-        }
-
-        console.log("-- couldn't convert value to string: %j", value);
-        if (options && options.defaultVal)
-            return options.defaultVal;
-
-        return "";
-    }
-
-
-    // FIX: impl aufgebaut.
-    //  && options && _.has(options, 'defaultVal' )
-    // && value != false
-    if ( !value ) {
-        console.log( "-- no value passed. use " );
-
-        // return build(this.json);
-        // return options.defaultVal;
-        return "";
-    }
-
-    return build(value);
+    return concat(value, options);
 };
+
+
+var trimmed = function( str, options ) {
+    if( options && options.trim ) {
+        var S = require( "string" );
+        return S(str).trim();
+    }
+
+    return str;
+};
+
+
+var concatArray = function( array, options ) {
+    var _ = require('underscore');
+
+    var rval = "";
+
+    _.each(array, function (entry) {
+        rval += entry ? entry : "";
+    });
+
+    return trimmed(rval, options);
+};
+
+var concatObj = function( obj, options ) {
+    console.log( "##ERROR ::: " + obj);
+
+    return "---";
+};
+
+
+var concat = function( value, options ) {
+    var _ = require('underscore');
+
+    if (_.isString(value))
+        return trimmed(value, options);
+
+    if (_.isArray(value))
+        return concatArray(value, options);
+
+    if(_.isObject(value) )
+        return concatObj(value, options);
+
+    if ( !value && options && _.has(options, "defaultVal") )
+       return concat(options.defaultVal);
+
+    return "" + value;
+};
+
