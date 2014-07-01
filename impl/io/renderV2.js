@@ -25,41 +25,42 @@
  *
  * @returns {*} stream to render
  */
-exports.exec = function( template, field, options ) {
+exports.exec = function( template, field ) {
     var _ = require( 'underscore' );
     var streams = require('event-stream');
-    var fs = require( 'fs' );
-
-    if( !template || !_.isString(template) ) {
-        console.log("[## ERROR] wrong argument 'template'. Is not a string." );
-        return;
-    }
-
-    var S = require( 'string' );
-
-    function loadTmpl(template) {
-       return fs.readFileSync(template);
-    }
-
 
 
     return streams.through(
 
         function write(data) {
-            var tmpl = S(template).startsWith( "file://" ) ? loadTmpl(template) : template;
-            var rendered = _.template(tmpl, data);
+            var render = require('../template/renderUnderscore.js').render;
+            var rendered = render(template, data);
 
             if( !field ) {
                 console.log(" --- has no field param: " + field);
-
                 this.emit('data', rendered );
+
                 return;
             }
 
-            if(_.isString(field) && _.has(data, field) ) {
-                console.log( "[## WARN] overwrite field data." + field + " with new value. Old value is { value : " + data[field] + "}." );
+            if( !_.isString(field) ) {
+                console.log( "[ERROR] passed field-name: " + field + " is not a string." );
+                return;
             }
 
+            var isFilePath = require( '../asserts/isFilePath.js').check;
+            var foundPath = isFilePath(field);
+
+            if( foundPath ) {
+                var write = require( '../template/writeToFile.js').write;
+                write(foundPath, rendered);
+
+                return;
+            }
+
+            if(_.has(data, field) ) {
+                console.log( "[## WARN] overwrite field data." + field + " with new value. Old value is { value : " + data[field] + "}." );
+            }
             data[field] = rendered;
 
             this.emit('data', data );

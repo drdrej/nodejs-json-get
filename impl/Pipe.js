@@ -1,4 +1,6 @@
 var Pipe = function(stream, options) {
+    this.start = stream;
+
     this.current = stream;
     this.options = options;
 };
@@ -16,8 +18,8 @@ Pipe.prototype.select = function( path ) {
 };
 
 Pipe.prototype.render = function( template, field ) {
-    var render = require( './io/render.js').exec;
-    this._use( render( template, field, this.options ) );
+    var render = require( './io/renderV2.js').exec;
+    this._use( render( template, field ) );
 
     return this;
 };
@@ -45,6 +47,13 @@ Pipe.prototype.validate = function( validateFnc, skipIfBroken ) {
 
 Pipe.prototype.asArray = function() {
     var fnc = require( './io/asArray.js').exec;
+    this._use( fnc() );
+
+    return this;
+};
+
+Pipe.prototype.asSelectable = function() {
+    var fnc = require( './io/asSelectable.js').exec;
     this._use( fnc() );
 
     return this;
