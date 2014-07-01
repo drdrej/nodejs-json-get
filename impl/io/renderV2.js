@@ -48,8 +48,10 @@ exports.exec = function( template, field ) {
                 return;
             }
 
+            var output = _.template(field, data);
+
             var isFilePath = require( '../asserts/isFilePath.js').check;
-            var foundPath = isFilePath(field);
+            var foundPath = isFilePath( output );
 
             if( foundPath ) {
                 var write = require( '../template/writeToFile.js').write;
@@ -61,8 +63,8 @@ exports.exec = function( template, field ) {
             if(_.has(data, field) ) {
                 console.log( "[## WARN] overwrite field data." + field + " with new value. Old value is { value : " + data[field] + "}." );
             }
-            data[field] = rendered;
 
+            data[field] = rendered;
             this.emit('data', data );
         },
 

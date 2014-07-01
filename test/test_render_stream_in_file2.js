@@ -23,8 +23,10 @@ describe('Test: render by stream into file', function () {
                 }
             ]
         })
+            .select( ".persons > *" )
             .asSelectable()
-            .render( "file://./test/tmpl/test_render_persons.txt.tmpl", "file://" + output )
+            .render( "file://./test/tmpl/test_render_every_person.txt.tmpl",
+                     "file://./test/rendered/rendered_person_<%= text('.name') %>.txt" )
             .done(function() {
                 var path = require( 'path' );
                 var fs = require( 'fs' );
