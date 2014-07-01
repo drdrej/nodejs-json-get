@@ -27,9 +27,10 @@ exports.selectable =  function (json) {
         json: json,
 
         text: function (path, defVal, shouldTrim) {
-            var select = require('JSONSelect');
-            var selected = select.match(path, this.json);
+            console.log( "-- text( path : %j )", path);
+
             var concat = require("../api.js").asText;
+            var selected = doSelection(path, this.json); // (path, obj)
 
             if( defVal ) {
                 return concat(selected, {
@@ -70,8 +71,8 @@ exports.selectable =  function (json) {
             var selected = select.match(path, this.json);
 
             _.each( selected, function (entry, idx){
-                  var wrapped = exports.selectable(entry);
-                  step(wrapped, idx);
+                var wrapped = exports.selectable(entry);
+                step(wrapped, idx);
             });
         },
 
@@ -81,3 +82,28 @@ exports.selectable =  function (json) {
         }
     }
 };
+
+/**
+ * Select path on Object or pass it to the next function.
+ *
+ * @param path
+ * @param obj
+ * @return {*}
+ */
+var doSelection = function (path, obj) {
+    console.log( '## path [= ' + path+ '] vs. object [= ' + obj + ' ]' );
+
+    var _ = require( 'underscore' );
+    var isValidArguments = (path && _.isString(path) && !_.isNull(obj));
+
+    if( isValidArguments ) {
+        var select = require('JSONSelect');
+        return select.match(path, obj);
+    } else {
+        if(_.isArray(obj) )
+            return obj;
+
+        if(_.isObject(obj) )
+            return [obj];
+    }
+}

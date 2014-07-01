@@ -19,6 +19,12 @@ exports.exec = function( path ) {
 
     return streams.through(function write(data) {
             var selected = jsonSelect.match(path, data);
+
+            if( !selected ) {
+                console.log( "[WARN] nothing found in path: %j ", path );
+                return;
+            }
+
             var pipe = this;
 
             _.each( selected, function( element ) {

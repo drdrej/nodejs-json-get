@@ -2,8 +2,20 @@ Found persons:
 -----------------------------------------------
 
 
-   AAA -
+   AAA
 
-   BBB -
+   BBB
 
-   CCC -
+   CCC
+
+
+
+Test with empty text() call:
+(same value as above)
+-----------------------------------------------
+
+   [object Object]
+
+   [object Object]
+
+   [object Object]

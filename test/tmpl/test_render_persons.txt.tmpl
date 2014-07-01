@@ -2,5 +2,13 @@ Found persons:
 -----------------------------------------------
 
 <% each( '.persons > *', function( person ){ %>
-   <%= person.text( '.name' ) %> -
+   <%= person.text( '.name' ) %>
+<% }) %>
+
+
+Test with empty text() call:
+(same value as above)
+-----------------------------------------------
+<% each( '.persons > *', function( person ){ %>
+   <%= person.text() %>
 <% }) %>
