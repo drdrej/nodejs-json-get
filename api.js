@@ -9,7 +9,7 @@
 
 exports.asText = require( './impl/asText.js').asText;
 
-exports.selectable = require( './impl/selectable.js').selectable;
+exports.selectable = require( './impl/SelectableFactory.js').selectable;
 
 /**
  * DEPRECATED
