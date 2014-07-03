@@ -4,7 +4,12 @@ var use = function(transformFnc) {
     if(_.isFunction(transformFnc) ) {
         return transformFnc;
     } else if(_.isString(transformFnc) ) {
-        console.log( "-- load transformation: " + transformFnc);
+        console.log( "-- load transformation: %j", transformFnc);
+
+        var isFilePath = require( '../asserts/isFilePath').check;
+        var foundPath = isFilePath(transformFnc);
+        if( foundPath )
+            return require( foundPath ).transform;
 
         return require( transformFnc ).transform;
     } else {

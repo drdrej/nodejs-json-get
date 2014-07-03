@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Index</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Index</h1>
+
+    
+
+
+    
+
+
+    <h3>json-tools 0.2.21</h3>
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+    <section>
+        <article><h1>json-tools</h1><p>json-tools is a simple js-lib to simplify access to elements in json.
+it should help to do some basic tasks with json-structure like rendering, selection, transformation.</p>
+<pre class="prettyprint source"><code> development: active
+ version: 0.2.21
+ author: A.siebert (drdrej)</code></pre><h2>Inspired by following concepts:</h2><ul>
+<li>model driven architecture</li>
+<li>fluent APIs</li>
+<li>domain specific languages</li>
+</ul>
+<h2>Third-Party Code</h2><p>To build this product I've used some open-source stuff:</p>
+<ul>
+<li>event-stream</li>
+<li>JSONSelect</li>
+<li>string</li>
+<li>underscore</li>
+<li>wrench</li>
+</ul>
+<p>I like to say thank you to authors of this useful stuff!</p>
+<h2>When and where to use</h2><p>...</p>
+<h2>Usage</h2><p>First of all you need to install an npm module.</p>
+<pre class="prettyprint source"><code>     > npm install json-tools</code></pre><p>In the next step you need to load the npm-module.</p>
+<pre class="prettyprint source lang-javascript"><code>   var tools = require( 'json-tools' );</code></pre><p>Now you can work with these json-tools. A tools-instance provides some methods to work with json:</p>
+<pre class="prettyprint source"><code> 1. asText( value, options)
+ 2. selectable( object )
+ 3. each( fnc )
+ 4. query( json, [options] )</code></pre><p>F.e. if you like to make a selection on JSON-Object, then you need to create a selectable
+and then you can use css-selectors to querying a structure.</p>
+<p><strong>Example:</strong> </p>
+<pre class="prettyprint source lang-javascript"><code>   var myObj = {
+      root: {
+         persons : [
+
+       {
+          name: &quot;xyz&quot;,
+          age: 13 
+       },
+
+       {
+          name: &quot;abz&quot;,
+          age: 23 
+       },
+
+       {
+          name: &quot;cde&quot;,
+          age: 33 
+       }  
+   ]}};
+
+   // creates a selectable:
+   var selectable = tools.selectable( myObj );
+
+   // return the first element in the result:
+   console.log( selectable.first( &quot;.root > .persons > *&quot; ) );
+
+   // return string/text of a selection
+   console.log( selectable.text( &quot;.root > .persons > * > .name&quot; ) );</code></pre><p>You can also iterate over selection in callback-style.</p>
+<p><strong>Example:</strong> </p>
+<pre class="prettyprint source lang-javascript"><code>
+   selectable.each( &quot;.root > .persons > *&quot;, function(element) {
+        // passed &quot;element&quot; is also a selectable.
+        // so you have same methods in selected element (text, first, each)
+
+        // different ways to work with content
+        // ------------------------------------
+
+        // access to json-sub-structure:
+        console.log( element.json.name );
+
+        // access to json-sub-structure:
+        console.log( element.text( &quot;.name&quot; ) );
+   });</code></pre><p>Good to know, that you can also use the each() method on selected element.
+<strong>Example:</strong></p>
+<pre class="prettyprint source lang-javascript"><code>
+   selectable.each( query, function(element) {
+        element.each( subQuery, function( subElement ) {
+            ...
+        });
+   });</code></pre><h3>Transformations</h3><p>API supports now transformations. To exec a transformation you need to create a query object and call select()
+and transform() functions.</p>
+<p><strong>Example:</strong></p>
+<pre class="prettyprint source lang-javascript"><code>
+   var tools = require( 'json-tools' );
+   tools.query( json )
+        .select( '.root > .persons > *' )
+        .transform( function( element ){
+               // do some transformation with element
+               var result = ...
+
+               // returns transformed element.
+               return result;
+   });</code></pre><p>You can easyly render and dump a json-element to a file like in the following example:</p>
+<pre class="prettyprint source lang-javascript"><code>   var tools = require( 'json-tools' );
+   tools.query( json )
+        .select( '.root > .persons > *' )
+        .transform( function( element ){
+               ...
+        })
+        .dump( &quot;c:\\temp\\test\\&lt;%= name %>.json&quot; );</code></pre><p>In the above example dump-function will use the passed path-template and json-data
+to render the path and dump json-data into this file.</p>
+<p>Another nice short-cut is a transform( string:path ) and write external transformations.</p>
+<p>First of all you can move above used transformation-function to another file. F.e. create a folder <strong>&quot;/transform/&quot;</strong>
+and place this file <strong>&quot;myTransformation.js&quot;</strong> into this folder:</p>
+<pre class="prettyprint source lang-javascript"><code>
+   // this is a transformation-file
+   exports.transform = function( element ){
+               ...
+   };</code></pre><p>Modify your code  to use this external transformation:</p>
+<pre class="prettyprint source lang-javascript"><code>   var tools = require( 'json-tools' );
+   tools.query( json )
+        .select( '.root > .persons > *' )
+        .transform( __dirname + '/transform/myTransformation.js' )
+        .dump( &quot;c:\\temp\\test\\&lt;%= name %>.json&quot; );</code></pre><p><strong>Important:</strong> current version supports only absolute path and do not check the path-var.</p>
+<h3>Merge and Split</h3><p>Sometimes you need to split a passed object into a bunch of objects. you can do it with the split() function
+and asArray() catch a stream of objects and build an array. path this array in the stream to the next handler.</p>
+<p><strong>Important:</strong>  current version of slit() supports only arrays.</p>
+<p><em>TODO: need examples</em></p>
+<h3>Render content</h3><pre class="prettyprint source lang-javascript"><code>   var tools = require( 'json-tools' );
+   tools.query( json )
+        .select( '.root > .persons > *' )
+        .transform( function( element ){
+               ...
+        })
+        .render( 'test content rendered with &lt;%= name %> and wrote to field $rendered', '$rendered' )</code></pre><p>In this example the render()-function creates field named $rendered in passed object, and fill this field with rendered value, based on passed template and object (in the stream).</p>
+<h2>API</h2><h3>asText</h3><p>Extract text from structure.</p>
+<h3>selectable</h3><p>Extends passed object with methods to query and render this object.</p>
+<h4>text =</h4><p>function (path, defVal, shouldTrim)</p>
+<h4>exists</h4><p>function (path)</p>
+<h4>first</h4><p>function (path)</p>
+<h4>each</h4><p>function (path, step)</p>
+<h4>render( template )</h4><p>This method gives you a way to render object.
+Current implementation uses Underscore.templates.</p>
+<ul>
+<li><strong>template</strong>: Path underscore-template or path to existing template.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre class="prettyprint source lang-javascript"><code>   var tools = require( 'json-tools' );
+   var selectable = tools.selectable( json );
+   var rendered = selectable.render( &quot;&lt;%= text('.field') %>&quot; )</code></pre><h3>json</h3><p>Creates a stream-pipe and forward passed json-object into this stream.</p>
+<h4>select( String:cssPath )</h4><p>Selects elements on passed Object. Result is an array of elements. Every element in array will be passed in the pipe to the next stream.</p>
+<h5>Parameters:</h5><ul>
+<li><strong>cssPath</strong> of type String.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre class="prettyprint source lang-javascript"><code>   var obj = { ... };
+   var tools = require( 'json-tools' );
+
+   // select a field:
+   var rendered = tools.json( obj ).select('.field' );</code></pre><h4>render( )</h4><h4>done( )</h4><h4>render</h4><h4>dump</h4><h4>transform</h4><h4>validate</h4><h4>asArray</h4><h4>asSelectable</h4><h4>split</h4><h4>done</h4><h2>History</h2><h3>until version 0.2.12</h3><ul>
+<li>Only basic implementation.</li>
+<li>Not tested well - need more tests.</li>
+<li>use it actively in my other projects.</li>
+</ul>
+<p>I found in some situations I need to redesign json-tools.
+I've started to change the api(). Release 0.3.x should have a valid and sable api.</p>
+<h3>version 0.3.x</h3><h2>License</h2><p>This project is open-source and is distributed under MIT License (check the LICENSE-file).</p>
+<p>The MIT License (MIT)</p>
+<p>Copyright (c) 2014 Andreas Siebert</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the &quot;Software&quot;), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+<p>write code &amp; have fun! ---- A. Siebert</p></article>
+    </section>
+
+
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Index</a></h2><h3>Global</h3><ul><li><a href="global.html#asText">asText</a></li><li><a href="global.html#DEFAULT_NOOP_QUERY">DEFAULT_NOOP_QUERY</a></li><li><a href="global.html#json">json</a></li><li><a href="global.html#query">query</a></li><li><a href="global.html#selectable">selectable</a></li></ul>
+</nav>
+
+<br clear="both">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0-alpha9</a> on Thu Jul 03 2014 15:09:21 GMT+0200 (CEST)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
