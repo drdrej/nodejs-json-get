@@ -17,27 +17,15 @@ exports.exec = function( path, options ) {
 
     return streams.through(
         function write(data) {
-            var realPath = _.template(path, data);
+            var rendered = JSON.stringify(data);
 
-            console.log( " ### path rendered( %j )", realPath );
-
-            var json = JSON.stringify(data, null, 4);
-
-            var pathUtil = require( 'path' );
-            var dir = pathUtil.dirname( realPath );
-            if( !fs.existsSync(dir) ) {
-                console.log( "[## INFO] path not exists. creates path: " + dir );
-                var wrench = require( 'wrench' );
-                wrench.mkdirSyncRecursive(dir, 0777);
-            }
-
-            fs.writeFileSync(realPath, json);
-
-            this.emit('data', data );
+            var write = require( './helper/handleDataWriting').write;
+            write(this, path, data, rendered);
         },
 
         function end () {
-            // forward "end"
             this.emit('end');
         });
 };
+
+

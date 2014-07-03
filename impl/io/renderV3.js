@@ -36,6 +36,10 @@ exports.exec = function( template, field ) {
             var render = require('../template/renderTmpl.js').render;
             var rendered = render(template, data);
 
+            var write = require( './helper/handleDataWriting' ).write;
+            write(this, field, data, rendered );
+
+            /*
             if( !field ) {
                 console.log(" --- has no field param: " + field);
                 this.emit('data', rendered );
@@ -64,6 +68,7 @@ exports.exec = function( template, field ) {
 
             data[field] = rendered;
             this.emit('data', data );
+            */
         },
 
         function end () {

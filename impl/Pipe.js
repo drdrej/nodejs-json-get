@@ -25,7 +25,7 @@ Pipe.prototype.render = function( template, field ) {
 };
 
 Pipe.prototype.dump = function( path ) {
-    var dump = require( './io/dump.js').exec;
+    var dump = require( './io/dumpV2.js').exec;
     this._use( dump(path, this.options) );
 
     return this;
