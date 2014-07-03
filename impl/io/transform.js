@@ -8,8 +8,11 @@ var use = function(transformFnc) {
 
         var isFilePath = require( '../asserts/isFilePath').check;
         var foundPath = isFilePath(transformFnc);
-        if( foundPath )
-            return require( foundPath ).transform;
+        if( foundPath ) {
+            var pathUtil = require( 'path' );
+            var resolved = pathUtil.resolve(pathUtil.normalize( foundPath ));
+            return require(resolved).transform;
+        }
 
         return require( transformFnc ).transform;
     } else {

@@ -20,7 +20,9 @@ exports.selectable = require( './impl/SelectableFactory.js').selectable;
  *
  * @type {query}
  */
-exports.query = require( './impl/json.js' ).query;
+exports.query = function() {
+    throw "ERROR: please use json() method instead of query(). query will be removed later.";
+};
 
 /**
  * Send JSON-Object in the pipe of streams.

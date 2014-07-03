@@ -4,7 +4,7 @@ var _ = require("underscore");
 describe('test api.query().', function () {
 
     it("select -> transform -> .", function (done) {
-        var query = require('../api.js').query;
+        var query = require('../api.js').json;
 
         query({
             persons: [
@@ -43,7 +43,7 @@ describe('test api.query().', function () {
 
 
     it("select -> transform -> . (2)", function (done) {
-        var query = require('../api.js').query;
+        var query = require('../api.js').json;
 
         query({
             persons: [
@@ -80,7 +80,7 @@ describe('test api.query().', function () {
     });
 
     it("select -> transform -> . (3)", function (done) {
-        var query = require('../api.js').query;
+        var query = require('../api.js').json;
 
         query({
             persons: [

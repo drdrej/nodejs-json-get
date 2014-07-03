@@ -4,7 +4,7 @@ var _ = require("underscore");
 describe('test passing options', function () {
 
     it("test external transformation: transform( 'path' ) ", function (done) {
-        var query = require('../api.js').query;
+        var query = require('../api.js').json;
 
         query({
             persons: [
