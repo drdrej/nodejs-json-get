@@ -7,8 +7,14 @@ it should help to do some basic tasks with json-structure like rendering, select
 
 
      development: active
-     version: 0.2.19
+     version: 0.2.20
      author: A.siebert (drdrej)
+
+## Inspired by following concepts:
+* model driven architecture
+* fluent APIs
+* domain specific languages
+
 
 ## Third-Party Code
 To build this product I've used some open-source stuff:
@@ -201,13 +207,31 @@ and asArray() catch a stream of objects and build an array. path this array in t
 
 In this example the render()-function creates field named $rendered in passed object, and fill this field with rendered value, based on passed template and object (in the stream).
 
+
+
 ## API
+
+
 
 ### asText
 Extract text from structure.
 
+
+
 ### selectable
 Extends passed object with methods to query and render this object.
+
+#### text =
+function (path, defVal, shouldTrim)
+
+#### exists
+function (path)
+
+#### first
+function (path)
+
+#### each
+function (path, step)
 
 #### render( template )
 
@@ -222,7 +246,6 @@ Current implementation uses Underscore.templates.
    var selectable = tools.selectable( json );
    var rendered = selectable.render( "<%= text('.field') %>" )
 ```
-
 
 
 
@@ -249,49 +272,14 @@ Selects elements on passed Object. Result is an array of elements. Every element
 
 #### render( )
 #### done( )
-
-
-
-Pipe.prototype.render = function( template, field ) {
-    var render = require( './io/renderV2.js').exec;
-    this._use( render( template, field ) );
-
-    return this;
-};
-
-Pipe.prototype.dump = function( path ) {
-    var dump = require( './io/dump.js').exec;
-    this._use( dump(path, this.options) );
-
-    return this;
-};
-
-Pipe.prototype.transform = function( fnc ) {
-    var transformator = require( './io/transform.js').exec;
-    this._use(transformator(fnc, this.options));
-
-    return this;
-};
-
-Pipe.prototype.validate = function( validateFnc, skipIfBroken ) {
-    var fnc = require( './io/validate.js').exec;
-    this._use( fnc(validateFnc, skipIfBroken, this.options) );
-
-    return this;
-};
-
-Pipe.prototype.asArray = function() {
-    var fnc = require( './io/asArray.js').exec;
-    this._use( fnc() );
-
-    return this;
-};
-
-Pipe.prototype.asSelectable = function() {
-
-split
-
-done
+#### render
+#### dump
+#### transform
+#### validate
+#### asArray
+#### asSelectable
+#### split
+#### done
 
 
 
