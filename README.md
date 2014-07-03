@@ -7,7 +7,7 @@ it should help to do some basic tasks with json-structure like rendering, select
 
 
      development: active
-     version: 0.2.20
+     version: 0.2.21
      author: A.siebert (drdrej)
 
 ## Inspired by following concepts:
@@ -28,8 +28,7 @@ I like to say thank you to authors of this useful stuff!
 
 
 ## When and where to use
-
-*TODO:" need to document
+...
 
 ## Usage
 

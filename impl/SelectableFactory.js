@@ -9,6 +9,7 @@ var Selectable = require( './Selectable').Selectable;
  * @author A. Siebert, ask@touchableheroes.com
  */
 exports.selectable =  function (json) {
+    /*
     var _ = require('underscore');
     var isNotObj = !(json && _.isObject(json));
 
@@ -26,6 +27,7 @@ exports.selectable =  function (json) {
 
         return json;
     }
+    */
 
     return new Selectable(json);
 };

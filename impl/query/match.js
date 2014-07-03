@@ -27,9 +27,11 @@ exports.match = function(path, obj) {
         if (_.isArray(obj))
             return obj;
 
-        if (_.isObject(obj))
+        if( !_.isNull(obj) ) {
             return [obj];
+        }
     }
+
 
     return null;
 };
