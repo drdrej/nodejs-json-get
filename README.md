@@ -7,7 +7,7 @@ it should help to do some basic tasks with json-structure like rendering, select
 
 
      development: active
-     version: 0.2.23
+     version: 0.2.24
      author: A.siebert (drdrej)
 
 ## Inspired by following concepts:
@@ -220,7 +220,7 @@ Extract text from structure.
 ### selectable
 Extends passed object with methods to query and render this object.
 
-#### text =
+#### text 
 function (path, defVal, shouldTrim)
 
 #### exists
@@ -233,6 +233,8 @@ function (path)
 function (path, step)
 
 #### render( template )
+
+#### put( key, value )
 
 This method gives you a way to render object.
 Current implementation uses Underscore.templates.
