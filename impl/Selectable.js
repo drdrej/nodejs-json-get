@@ -2,6 +2,7 @@ var _ = require( 'underscore' );
 var match =  require( "./query/match").match;
 
 var Selectable = function(json) {
+    this.$isSelectable = true;
     this.json = json;
 }
 
@@ -18,6 +19,18 @@ Selectable.prototype.text = function (path, defVal, shouldTrim) {
         });
     } else {
         return concat(selected);
+    }
+};
+
+Selectable.prototype.put = function (key, value) {
+    var _ = require("underscore");
+
+    var S = require( 'string' );
+    if( S(key).startsWith("#") ) {
+        var field = key.substr(1);
+
+        console.log("[PUT] %j : %j", field, value);
+        this.json[field] = value;
     }
 };
 

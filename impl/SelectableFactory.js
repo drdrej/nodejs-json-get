@@ -9,25 +9,11 @@ var Selectable = require( './Selectable').Selectable;
  * @author A. Siebert, ask@touchableheroes.com
  */
 exports.selectable =  function (json) {
-    /*
-    var _ = require('underscore');
-    var isNotObj = !(json && _.isObject(json));
+    if(!json || _.isNull(json))
+       return  new Selectable(null);
 
-    if (isNotObj) {
-        var msg = "## skip! couldn't create a selectable. json = " + json;
-        console.error(msg);
-
-        if(_.isString(json) || _.isNumber(json) ) {
-            console.log( "-- return json as it is.");
-            return json;
-        } else {
-            console.log( "-- return undefined!");
-            return;
-        }
-
+    if( json.$isSelectable )
         return json;
-    }
-    */
 
     return new Selectable(json);
 };
