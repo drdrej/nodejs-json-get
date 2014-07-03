@@ -33,7 +33,7 @@ exports.exec = function( template, field ) {
     return streams.through(
 
         function write(data) {
-            var render = require('../template/renderUnderscore.js').render;
+            var render = require('../template/renderTmpl.js').render;
             var rendered = render(template, data);
 
             if( !field ) {
@@ -48,10 +48,11 @@ exports.exec = function( template, field ) {
                 return;
             }
 
+            var renderPath = require( '../template/renderPath').render;
             var foundPath = renderPath( field, data );
             if( foundPath ) {
                 console.log( "-- render path: %j", foundPath );
-                var write = require( '../template/writeToFile.js').write;
+                var write = require( '../template/writeFile.js').write;
                 write(foundPath, rendered);
 
                 return;
@@ -71,19 +72,3 @@ exports.exec = function( template, field ) {
 };
 
 
-var renderPath = function( path, data ) {
-    var _ = require( 'underscore' );
-    var rendered = _.template(path, data);
-
-    var isFilePath = require( '../asserts/isFilePath.js').check;
-    var foundPath = isFilePath( rendered );
-
-    if( foundPath ) {
-        var pathUtil = require( 'path' );
-        var resolved = pathUtil.normalize( foundPath );
-
-        return resolved;
-    }
-
-    console.log( "[WARN] output is not a path. path = " + path );
-};

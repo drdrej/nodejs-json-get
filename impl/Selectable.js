@@ -54,7 +54,7 @@ Selectable.prototype.each = function (path, step) {
     };
 
 Selectable.prototype.render = function( template ) {
-    var render = require( './template/renderUnderscore.js').render;
+    var render = require( './template/renderTmpl.js').render;
     return render( template, this);
 };
 
