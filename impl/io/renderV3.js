@@ -38,37 +38,6 @@ exports.exec = function( template, field ) {
 
             var write = require( './helper/handleDataWriting' ).write;
             write(this, field, data, rendered );
-
-            /*
-            if( !field ) {
-                console.log(" --- has no field param: " + field);
-                this.emit('data', rendered );
-
-                return;
-            }
-
-            if( !_.isString(field) ) {
-                console.log( "[ERROR] passed field-name: " + field + " is not a string." );
-                return;
-            }
-
-            var renderPath = require( '../template/renderPath').render;
-            var foundPath = renderPath( field, data );
-            if( foundPath ) {
-                console.log( "-- render path: %j", foundPath );
-                var write = require( '../template/writeFile.js').write;
-                write(foundPath, rendered);
-
-                return;
-            }
-
-            if(_.has(data, field) ) {
-                console.log( "[## WARN] overwrite field data." + field + " with new value. Old value is { value : " + data[field] + "}." );
-            }
-
-            data[field] = rendered;
-            this.emit('data', data );
-            */
         },
 
         function end () {

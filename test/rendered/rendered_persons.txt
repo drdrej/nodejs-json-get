@@ -1,1 +1,21 @@
-[object Object]
+Found persons:
+-----------------------------------------------
+
+
+   AAA
+
+   BBB
+
+   CCC
+
+
+
+Test with empty text() call:
+(same value as above)
+-----------------------------------------------
+
+   AAA
+
+   BBB
+
+   CCC

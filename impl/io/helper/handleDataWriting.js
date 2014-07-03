@@ -18,7 +18,7 @@ exports.write = function(stream, path, data, rendered ) {
     if( foundPath ) {
         console.log( "-- render path: %j", foundPath );
         var write = require( '../../template/writeFile.js').write;
-        write(foundPath, data);
+        write(foundPath, rendered);
 
         return;
     }
