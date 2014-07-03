@@ -19,7 +19,7 @@ describe('Test selectable().text()', function () {
         done();
     });
 
-    it( "text( , defaultVal)", function (done) {
+    it( "text()", function (done) {
         var txt = selectable.text();
         assert.equal( txt, "ABC" );
         assert.ok(_.isString( txt ));
