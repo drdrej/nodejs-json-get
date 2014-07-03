@@ -17,7 +17,7 @@ exports.exec = function( path, options ) {
 
     return streams.through(
         function write(data) {
-            var rendered = JSON.stringify(data);
+            var rendered = JSON.stringify(data, null, 4);
 
             var write = require( './helper/handleDataWriting').write;
             write(this, path, data, rendered);
