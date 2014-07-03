@@ -1,5 +1,5 @@
 var _ = require( 'underscore' );
-var match =  require( "./query/match").match;
+
 var Selectable = require( './Selectable').Selectable;
 
 /**

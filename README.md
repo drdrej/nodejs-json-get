@@ -288,28 +288,10 @@ Pipe.prototype.asArray = function() {
 };
 
 Pipe.prototype.asSelectable = function() {
-    var fnc = require( './io/asSelectable.js').exec;
-    this._use( fnc() );
 
-    return this;
-};
+split
 
-Pipe.prototype.split = function( ) {
-    var fnc = require( './io/split.js').exec;
-    this._use( fnc() );
-
-    return this;
-};
-
-/**
- * @param fnc
- */
-Pipe.prototype.done = function( fnc ) {
-    var finished = require( './io/finished.js').exec;
-    this._use( finished(fnc) );
-
-    this.current = null;
-};
+done
 
 
 

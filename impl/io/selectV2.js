@@ -12,13 +12,13 @@
  * @param path CSS path (see: JSONSelect)
  */
 exports.exec = function( path ) {
-    var jsonSelect = require( 'JSONSelect' );
+    var match = require( '../query/match').match;
 
     var streams = require('event-stream');
     var _ = require( 'underscore' );
 
     return streams.through(function write(data) {
-            var selected = jsonSelect.match(path, data);
+            var selected = match(path, data);
 
             if( !selected ) {
                 console.log( "[WARN] nothing found in path: %j ", path );

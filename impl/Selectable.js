@@ -22,15 +22,12 @@ Selectable.prototype.text = function (path, defVal, shouldTrim) {
 };
 
 Selectable.prototype.exists = function (path) {
-    var select = require('JSONSelect');
-    var selected = select.match(path, this.json);
-
+    var selected = match(path, this.json);
     return (selected && selected.length && selected.length > 0);
 };
 
 Selectable.prototype.first = function (path) {
-    var select = require('JSONSelect');
-    var selected = select.match(path, this.json);
+    var selected = match(path, this.json);
 
     var hasFirstValue = (selected && selected.length && selected.length > 0);
     if(  hasFirstValue ) {
@@ -46,8 +43,7 @@ Selectable.prototype.each = function (path, step) {
             return;
         }
 
-        var select = require('JSONSelect');
-        var selected = select.match(path, this.json);
+        var selected = match(path, this.json);
 
         _.each( selected, function (entry, idx){
             var factory = require( './SelectableFactory' );
