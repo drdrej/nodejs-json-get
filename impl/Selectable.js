@@ -71,6 +71,31 @@ Selectable.prototype.render = function( template ) {
     return render( template, this);
 };
 
+/**
+ * render as list as string.
+ * use passed delimiter.
+ *
+ * @param path
+ * @param step
+ */
+Selectable.prototype.list = function (path, template, delim) {
+    var selected = match(path, this.json);
+    var render = require( './template/renderTmpl.js').render;
+
+    var rendered = "";
+    _.each( selected, function (entry, idx){
+        var factory = require( './SelectableFactory' );
+        var wrapped = factory.selectable(entry);
+
+        if( idx > 0 ) {
+            rendered += delim;
+        }
+
+        rendered += render( template, wrapped );
+    });
+
+    return rendered;
+};
 
 exports.Selectable = Selectable;
 
