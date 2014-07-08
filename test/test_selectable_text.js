@@ -27,4 +27,12 @@ describe('Test selectable().text()', function () {
         done();
     });
 
+    it( "text()", function (done) {
+        var txt = api.selectable(undefined).text();
+        assert.equal( txt, "" );
+        assert.ok(_.isString( txt ));
+
+        done();
+    });
+
 });

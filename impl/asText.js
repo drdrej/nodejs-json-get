@@ -52,6 +52,9 @@ var concatObj = function( obj, options ) {
 var concat = function( value, options ) {
     var _ = require('underscore');
 
+    if( !value )
+        return "";
+
     if (_.isString(value))
         return trimmed(value, options);
 
