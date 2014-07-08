@@ -37,7 +37,6 @@ var createStream = function( json ) {
     }
 
     throw "UNSUPPORTED TYPE OF OBJECT: " + json;
-
 };
 
 exports.query =  function (json, options) {

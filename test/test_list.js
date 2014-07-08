@@ -15,9 +15,17 @@ describe('Test selectable().list()', function () {
     });
 
 
-    it( "text( String, null)", function (done) {
+    it( "text(String, String, String)", function (done) {
         var txt = selectable.list( ".person > *", "Name: <%= text() %>", ", ");
         assert.equal( txt, "Name: ABC, Name: EFB" );
+        assert.ok(_.isString( txt ));
+
+        done();
+    });
+
+    it( "text( String, null, null)", function (done) {
+        var txt = selectable.list( ".person > *");
+        assert.equal( txt, "ABC, EFB" );
         assert.ok(_.isString( txt ));
 
         done();

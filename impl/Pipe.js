@@ -1,8 +1,8 @@
 var Pipe = function(stream, options) {
     this.start = stream;
+    this.options = options;
 
     this.current = stream;
-    this.options = options;
 };
 
 Pipe.prototype._use = function( stream) {
@@ -45,6 +45,8 @@ Pipe.prototype.validate = function( validateFnc, skipIfBroken ) {
     return this;
 };
 
+
+
 Pipe.prototype.asArray = function() {
     var fnc = require( './io/asArray.js').exec;
     this._use( fnc() );
@@ -65,6 +67,14 @@ Pipe.prototype.split = function( ) {
 
     return this;
 };
+
+
+Pipe.prototype.consume = function( obj ) {
+    throw "NOT IMPL. soncume()";
+};
+
+
+
 
 /**
  * @param fnc

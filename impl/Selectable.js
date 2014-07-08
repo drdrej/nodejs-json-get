@@ -75,12 +75,29 @@ Selectable.prototype.render = function( template ) {
  * render as list as string.
  * use passed delimiter.
  *
+ * if
+ *
  * @param path
- * @param step
+ * @param template
+ * @param delim
  */
 Selectable.prototype.list = function (path, template, delim) {
-    var selected = match(path, this.json);
-    var render = require( './template/renderTmpl.js').render;
+    var selected = null;
+
+    if( !path ) {
+        selected = [this.json];
+    } else {
+        selected = match(path, this.json);
+    }
+
+    if( !delim ) {
+        delim = ", ";
+    }
+
+    var render = null;
+    if( template ) {
+        render = require('./template/renderTmpl.js').render;
+    }
 
     var rendered = "";
     _.each( selected, function (entry, idx){
@@ -91,7 +108,10 @@ Selectable.prototype.list = function (path, template, delim) {
             rendered += delim;
         }
 
-        rendered += render( template, wrapped );
+        if( render && _.isFunction(render) )
+            rendered += render( template, wrapped );
+        else
+            rendered += wrapped.text();
     });
 
     return rendered;
