@@ -1,9 +1,8 @@
 json-tools
 ===============
 
-
-json-tools is a simple js-lib to simplify access to elements in json.
-it should help to do some basic tasks with json-structure like rendering, selection, transformation.
+**json-tools** is a library for access, transformation, and rendering of json.
+Using json-tools can be built a stream of selectors, transformations and validations and will later be filled with JSON/objects.
 
 
      development: active
