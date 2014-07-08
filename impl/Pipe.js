@@ -1,13 +1,22 @@
 var Pipe = function(stream, options) {
-    this.start = stream;
     this.options = options;
 
-    this.current = stream;
+    this._use(stream);
+
+    return this;
 };
 
 Pipe.prototype._use = function( stream) {
-    this.current.pipe( stream );
-    this.current = stream;
+    if( !stream )
+        return;
+
+    if( !this.current) {
+        this.start = stream;
+        this.current = stream;
+    } else {
+        this.current.pipe(stream);
+        this.current = stream;
+    }
 };
 
 Pipe.prototype.select = function( path ) {
@@ -70,7 +79,19 @@ Pipe.prototype.split = function( ) {
 
 
 Pipe.prototype.consume = function( obj ) {
-    throw "NOT IMPL. soncume()";
+    if( !this.start ) {
+        console.log( "ILLEGAL STATE ERROR: couldn't consume, because pipe of streams is not well formed.");
+        throw new Error();
+    }
+
+    var stream = exports.createPipe(obj);
+    var _ = require( 'underscore' );
+    if( !stream || _.isNull(stream) ) {
+        console.log( "ILLEGAL STATE ERROR: couldn'create stream. maybe passed object is NULL or corrupt.");
+        throw new Error();
+    }
+
+    stream.pipe(this.start);
 };
 
 
@@ -96,3 +117,19 @@ Pipe.prototype.finished = Pipe.prototype.done;
 
 
 exports.Pipe = Pipe;
+
+exports.createPipe = function( json ) {
+    var _ = require("underscore");
+    var  streams = require( 'event-stream' );
+    var isObject = require('./asserts/isObject').check;
+
+    if( isObject(json, "Couldn't query an object-structure.") ) {
+        return streams.readArray( [json] );
+    }
+
+    if( _.isArray(json) ) {
+        return streams.readArray( json );
+    }
+
+    throw "UNSUPPORTED TYPE OF OBJECT: " + json;
+};

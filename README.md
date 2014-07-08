@@ -7,7 +7,7 @@ it should help to do some basic tasks with json-structure like rendering, select
 
 
      development: active
-     version: 0.2.25
+     version: 0.2.26
      author: A.siebert (drdrej)
 
 ## Inspired by following concepts:

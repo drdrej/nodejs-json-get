@@ -6,45 +6,18 @@
  */
 
 
-/**
- * default empty-query object.
- *
- * @type {{select: select}}
- */
-var DEFAULT_NOOP_QUERY = {
-    select : function( inputQuery ) {
-        console.log( "[## SKIP] query: " + inputQuery);
-        return;
-    }
-};
-
-
 var Pipe = require( './Pipe.js').Pipe;
-
 var _ = require('underscore');
 
 
-var createStream = function( json ) {
-    var  streams = require( 'event-stream' );
-    var isObject = require('./asserts/isObject').check;
-
-    if( isObject(json, "Couldn't query an object-structure.") ) {
-        return streams.readArray( [json] );
-    }
-
-    if( _.isArray(json) ) {
-        return streams.readArray( json );
-    }
-
-    throw "UNSUPPORTED TYPE OF OBJECT: " + json;
-};
-
 exports.query =  function (json, options) {
-    if(_.isNull(json) ) {
-        throw "PASSED OBJECT is NULL! Skip pipe.";
+    if(!json) {
+        // throw "PASSED OBJECT is NULL! Skip pipe.";
+        return new Pipe(null, options);
     }
 
-    var stream = createStream( json );
+    var factory = require( "./Pipe.js");
+    var stream = factory.createPipe( json );
 
     return new Pipe(stream, options);
 };
