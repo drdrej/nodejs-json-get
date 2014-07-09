@@ -40,7 +40,7 @@ If you like fluent apis and streaming, knows css, and needs to handle a json-str
 
 ## Usage
 
-### Install json-tools
+### Install & load json-tools
 
 First of all you need to install an npm module.
 
@@ -48,22 +48,29 @@ First of all you need to install an npm module.
      > npm install json-tools
 ```
 
-### Simple objects and tasks.    
-In the next step you need to load the npm-module.
+The caller-script should load the npm-module  **'json-tools'**.
 
 ```javascript
    var tools = require( 'json-tools' );
+   
+   // ...
+   // use json-tools to work with json
 
 ```
 
-Now you can work with these json-tools. A tools-instance provides some methods to work with json:
+### Simple objects and tasks.    
 
-     1. asText( value, options)
-     2. selectable( object )
-     3. each( fnc )
-     4. query( json, [options] )
+Now you can work with these json-tools. A json-tools instance provides the following methods:
 
-F.e. if you like to make a selection on JSON-Object, then you need to create a selectable
+     1. asText( value, options) - renders text of a passed value
+     2. selectable( object ) - prepare object to be of prototype Selectable
+     3. each( fnc ) - iterates over selection
+     4. json( json, [options] ) - creates a pipe of streams to handle json objects
+
+Methods 1. -3. are sync and provides simple taks. Method json() is async and creates a pipe. This pipe can be filled with transformations and
+consume json-objects.
+
+If you like to make a selection on JSON-Object, then you need to create a selectable
 and then you can use css-selectors to querying a structure.
 
 **Example:** 
