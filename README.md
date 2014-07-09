@@ -2,15 +2,16 @@ json-tools
 ===============
 
 **json-tools** is a library for access, transformation, and rendering of json.
-Using json-tools can be built a stream of selectors, transformations and validations and will later be filled with JSON/objects.
-
+Using json-tools can be built a stream of selectors, transformations and validations. 
+This stream will later be filled with JSON/objects.
 
      development: active
      version: 0.2.27
      author: A.siebert (drdrej)
 
 ## Inspired by following concepts:
-* model driven architecture
+* streams
+* events & event-processing
 * fluent APIs
 * domain specific languages
 
@@ -25,18 +26,29 @@ To build this product I've used some open-source stuff:
 
 I like to say thank you to authors of this useful stuff!
 
+## Goals
+* select & transform objects with only few lines of code
+* declarative
+* code should be easy to read
+ 
 
 ## When and where to use
-...
+
+If you like fluent apis and streaming, knows css, and needs to handle a json-structure then json-tools is maybe a good helper.
+
+
 
 ## Usage
+
+### Install json-tools
 
 First of all you need to install an npm module.
 
 ```
      > npm install json-tools
 ```
-     
+
+### Simple objects and tasks.    
 In the next step you need to load the npm-module.
 
 ```javascript
@@ -119,6 +131,32 @@ Good to know, that you can also use the each() method on selected element.
    });
 
 ```
+
+### Streams and Pipes
+
+This example shows how to work with transformations and selection:
+
+```javascript
+
+   var tools = require( 'json-tools' );
+
+   tools.json()
+     .select( path )
+     .transform(function(element) {
+         // do some changes on passed element or create new one.
+         return element;
+     }) 
+     .validate(function(element) {
+         // use validators to validate and return true or false|null|undefined
+         return true;
+     })
+     .done( function() {
+         // this function will be called when stream is finished (send 'end')
+     });
+     
+   tools.consume( { ... } );
+```
+
 
 ### Transformations
 
