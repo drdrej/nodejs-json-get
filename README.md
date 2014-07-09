@@ -9,7 +9,7 @@ This stream will later be filled with JSON/objects.
      version: 0.2.27
      author: A.siebert (drdrej)
 
-## Inspired by following concepts:
+## Inspired by the following concepts
 * streams
 * events & event-processing
 * fluent APIs
