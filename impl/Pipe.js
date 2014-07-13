@@ -48,7 +48,7 @@ Pipe.prototype.transform = function( fnc ) {
 };
 
 Pipe.prototype.validate = function( validateFnc, skipIfBroken ) {
-    var fnc = require( './io/validate.js').exec;
+    var fnc = require( './io/validateV2.js').exec;
     this._use( fnc(validateFnc, skipIfBroken, this.options) );
 
     return this;

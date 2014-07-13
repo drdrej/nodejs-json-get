@@ -20,18 +20,35 @@ var use = function(transformFnc) {
     }
 };
 
-exports.exec = function( transformFnc, options ) {
+exports.exec = function( transformFnc, skipIfInvalid, options ) {
     var streams = require('event-stream');
 
     var fnc = use(transformFnc);
 
     return streams.through(function write(data) {
-            console.log( "[TRANSFORMATION] exec: " + transformFnc );
+            console.log( "[VALIDATE] use validator: " + transformFnc );
 
             var exec = require( '../asserts/exec.js').exec;
             var result = exec( fnc, data, options );
 
-            this.emit('data', result);
+            var isTrue = require( "../asserts/isTrue.js").check;
+
+            console.log( "[VALIDATED] result = " + result);
+
+            if( isTrue(result) ) {
+                this.emit('data', data);
+                return;
+            }
+
+            if( isTrue(skipIfInvalid) ) {
+                console.log( "-- [INVALID] element is invalid, skip element." );
+                return;
+            }
+
+            console.log( "[INVALID] couldn't exec, because error in stream.");
+            console.log( "[INVALID] data: %j", data);
+
+            throw new Error( "Couldn't exec validation successful. Use 'skipIfInvalid'=true Param to ignore invalid elements." );
         },
 
         function end () { //optional
