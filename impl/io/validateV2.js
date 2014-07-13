@@ -4,17 +4,17 @@ var use = function(transformFnc) {
     if(_.isFunction(transformFnc) ) {
         return transformFnc;
     } else if(_.isString(transformFnc) ) {
-        console.log( "-- load transformation: %j", transformFnc);
+        console.log( "-- load validator: %j", transformFnc);
 
         var isFilePath = require( '../asserts/isFilePath').check;
         var foundPath = isFilePath(transformFnc);
         if( foundPath ) {
             var pathUtil = require( 'path' );
             var resolved = pathUtil.resolve(pathUtil.normalize( foundPath ));
-            return require(resolved).transform;
+            return require(resolved).validate;
         }
 
-        return require( transformFnc ).transform;
+        return require( transformFnc ).validate;
     } else {
         throw "ERROR: don't accept param:transformFnc";
     }
