@@ -1,17 +1,17 @@
 json-tools
 ===============
 
-
-json-tools is a simple js-lib to simplify access to elements in json.
-it should help to do some basic tasks with json-structure like rendering, selection, transformation.
-
+**json-tools** is a library for access, transformation, and rendering of json.
+Using json-tools can be built a stream of selectors, transformations and validations. 
+This stream will later be filled with JSON/objects.
 
      development: active
      version: 0.2.29
      author: A.siebert (drdrej)
 
-## Inspired by following concepts:
-* model driven architecture
+## Inspired by the following concepts
+* streams
+* events & event-processing
 * fluent APIs
 * domain specific languages
 
@@ -26,33 +26,51 @@ To build this product I've used some open-source stuff:
 
 I like to say thank you to authors of this useful stuff!
 
+## Goals
+* select & transform objects with only few lines of code
+* declarative
+* code should be easy to read
+ 
 
 ## When and where to use
-...
+
+If you like fluent apis and streaming, knows css, and needs to handle a json-structure then json-tools is maybe a good helper.
+
+
 
 ## Usage
+
+### Install & load json-tools
 
 First of all you need to install an npm module.
 
 ```
      > npm install json-tools
 ```
-     
-In the next step you need to load the npm-module.
+
+The caller-script should load the npm-module  **'json-tools'**.
 
 ```javascript
    var tools = require( 'json-tools' );
+   
+   // ...
+   // use json-tools to work with json
 
 ```
 
-Now you can work with these json-tools. A tools-instance provides some methods to work with json:
+### Simple objects and tasks.    
 
-     1. asText( value, options)
-     2. selectable( object )
-     3. each( fnc )
-     4. query( json, [options] )
+Now you can work with these json-tools. A json-tools instance provides the following methods:
 
-F.e. if you like to make a selection on JSON-Object, then you need to create a selectable
+     1. asText( value, options) - renders text of a passed value
+     2. selectable( object ) - prepare object to be of prototype Selectable
+     3. each( fnc ) - iterates over selection
+     4. json( json, [options] ) - creates a pipe of streams to handle json objects
+
+Methods 1. -3. are sync and provides simple taks. Method json() is async and creates a pipe. This pipe can be filled with transformations and
+consume json-objects.
+
+If you like to make a selection on JSON-Object, then you need to create a selectable
 and then you can use css-selectors to querying a structure.
 
 **Example:** 
@@ -121,6 +139,32 @@ Good to know, that you can also use the each() method on selected element.
 
 ```
 
+### Streams and Pipes
+
+This example shows how to work with transformations and selection:
+
+```javascript
+
+   var tools = require( 'json-tools' );
+
+   tools.json()
+     .select( path )
+     .transform(function(element) {
+         // do some changes on passed element or create new one.
+         return element;
+     }) 
+     .validate(function(element) {
+         // use validators to validate and return true or false|null|undefined
+         return true;
+     })
+     .done( function() {
+         // this function will be called when stream is finished (send 'end')
+     });
+     
+   tools.consume( { ... } );
+```
+
+
 ### Transformations
 
 API supports now transformations. To exec a transformation you need to create a query object and call select()
@@ -139,6 +183,21 @@ and transform() functions.
                // returns transformed element.
                return result;
    });
+   
+   
+   // transformation modul in file.
+   /**
+ *
+ * @param json
+ * @param options
+ */
+exports.transform = function( json, options ) {
+    console.log( "-- prepare empty images list" );
+
+    json.$images = [];
+
+    return json;
+};
 ```
 
 You can easyly render and dump a json-element to a file like in the following example:
