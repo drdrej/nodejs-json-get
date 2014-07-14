@@ -183,6 +183,21 @@ and transform() functions.
                // returns transformed element.
                return result;
    });
+   
+   
+   // transformation modul in file.
+   /**
+ *
+ * @param json
+ * @param options
+ */
+exports.transform = function( json, options ) {
+    console.log( "-- prepare empty images list" );
+
+    json.$images = [];
+
+    return json;
+};
 ```
 
 You can easyly render and dump a json-element to a file like in the following example:
