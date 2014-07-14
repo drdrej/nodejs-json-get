@@ -6,7 +6,7 @@ Using json-tools can be built a stream of selectors, transformations and validat
 This stream will later be filled with JSON/objects.
 
      development: active
-     version: 0.2.29
+     version: 0.2.30
      author: A.siebert (drdrej)
 
 ## Inspired by the following concepts

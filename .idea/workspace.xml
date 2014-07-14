@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43da5df5-e8ba-4bda-8d98-b0ce46f0483b" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/impl/io/pipe.js" afterPath="$PROJECT_DIR$/impl/io/op.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/impl/Pipe.js" afterPath="$PROJECT_DIR$/impl/Pipe.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="nodejs-json-get.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,20 +45,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="5880">
+            <state vertical-scroll-proportion="0.016411379" vertical-offset="105" max-vertical-offset="5880">
               <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Pipe.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Pipe.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/impl/Pipe.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39297125" vertical-offset="1056" max-vertical-offset="2205">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1056" max-vertical-offset="2205">
               <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
               <folding />
             </state>
@@ -141,10 +140,10 @@
         <option value="$PROJECT_DIR$/impl/io/validate.js" />
         <option value="$PROJECT_DIR$/impl/io/transform.js" />
         <option value="$PROJECT_DIR$/impl/io/validateV2.js" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/impl/io/pipe.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/impl/Pipe.js" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -812,14 +811,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="5880">
-          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/impl/io/split.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="939">
@@ -844,6 +835,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/impl/Pipe.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1056" max-vertical-offset="2205">
+          <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="510">
@@ -852,10 +851,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/impl/Pipe.js">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39297125" vertical-offset="1056" max-vertical-offset="2205">
-          <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.016411379" vertical-offset="105" max-vertical-offset="5880">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
           <folding />
         </state>
       </provider>
