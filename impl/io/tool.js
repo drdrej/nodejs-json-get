@@ -1,3 +1,6 @@
+require( 'colors' );
+
+
 var load = function( path ) {
     var loader = require( 'artefactjs-loader');
 
@@ -11,22 +14,53 @@ exports.exec = function( operation, options ) {
     var streams = require('event-stream');
 
     var fnc = load(operation);
+    var execCounter = 0; // start with one, because of 'end' package
 
     return streams.through(function write(data) {
             console.log( "[TOOL] exec: " + operation );
 
-            var stream = this;
+            execCounter++;
 
-            var exec = require( '../asserts/exec.js').exec;
-            exec( fnc, data, function(err) {
+            var stream = this;
+            console.log( '[stream stoped]');
+            stream.pause();
+
+            fnc(data, function(err) {
                 console.log( "[OPERATION] finished" );
 
-                stream.emit( 'data', data );
+                if( err ) {
+                    console.log( "[ERROR] skip operation".red );
+                    execCounter--;
+
+                    return;
+                }
+
+                setTimeout( function() {
+                    stream.emit( 'data', data );
+                    console.log( "-- pic should be saved. next event.");
+                    execCounter--;
+                }, 1000);
+
                 return;
             });
         },
 
         function end () {
-            this.emit('end');
+            var _ = require( 'underscore' );
+            var stream = this;
+
+            var wait = setInterval( function() {
+                console.log( "-- check is ready? " + execCounter );
+
+                if( !(execCounter > 0) ) {
+                    stream.resume();
+
+                    clearInterval(wait);
+                    stream.emit('end');
+
+                    return;
+                }
+            }, 1000);
+
         });
 };
