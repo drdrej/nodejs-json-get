@@ -96,7 +96,7 @@ Pipe.prototype.consume = function( obj ) {
 
 Pipe.prototype.op = function(operation) {
     var fnc = require( './io/op.js').exec;
-    this._use( fnc(stream) );
+    this._use( fnc(operation) );
 
     return this;
 };

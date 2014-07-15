@@ -2,7 +2,7 @@ exports.exec = function( operation ) {
     var streams = require('event-stream');
     var _ = require( 'underscore' );
 
-    if( !operation || !_.isFunction(operation.exec) ) {
+    if( !operation || !_.isFunction(operation) ) {
         console.log( ("[ERROR] no operation passed. op: %j"), operation);
         console.log( "[ERROR] operation invalid".red);
 

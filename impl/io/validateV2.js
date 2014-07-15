@@ -1,3 +1,4 @@
+/*
 var use = function(transformFnc) {
     var _ = require( 'underscore' );
 
@@ -19,11 +20,20 @@ var use = function(transformFnc) {
         throw "ERROR: don't accept param:transformFnc";
     }
 };
+*/
+var load = function( path ) {
+    var loader = require( 'artefactjs-loader');
+
+    return loader.fnc( path,
+        function(path) {
+            return require(path).validate;
+        });
+};
 
 exports.exec = function( transformFnc, skipIfInvalid, options ) {
     var streams = require('event-stream');
 
-    var fnc = use(transformFnc);
+    var fnc = load(transformFnc);
 
     return streams.through(function write(data) {
             console.log( "[VALIDATE] use validator: " + transformFnc );
