@@ -24,7 +24,7 @@ describe('test exec operation', function () {
             test : true
         })
             .select(" .persons > * ")
-            .op( function( element, ready ) {
+            .tool( function( element, ready ) {
                 assert.ok(element);
                 ready();
             })

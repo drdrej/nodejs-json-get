@@ -94,8 +94,15 @@ Pipe.prototype.consume = function( obj ) {
     stream.pipe(this.start);
 };
 
-Pipe.prototype.op = function(operation) {
-    var fnc = require( './io/op.js').exec;
+/**
+ * tools is an object with function
+ * exec(data, callback). this function will be called.
+ *
+ * @param operation
+ * @return {Pipe}
+ */
+Pipe.prototype.tool = function(operation) {
+    var fnc = require( './io/tool.js').exec;
     this._use( fnc(operation) );
 
     return this;

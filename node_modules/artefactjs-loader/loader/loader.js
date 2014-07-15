@@ -50,6 +50,9 @@ exports.loader = function( path, load, strategy ) {
         return;
     }
 
+    if( str.startsWith('file://') ) {
+        path = path.substr( "file://".length );
+    }
 
     if (!fs.existsSync(path)) {
         console.log("-- path not exists. path : " + path);

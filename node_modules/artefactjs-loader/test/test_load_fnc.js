@@ -40,4 +40,18 @@ describe('Test load function', function () {
         done();
     });
 
+    it( "load(file://absolute-path, strategy) - file exists in caller dir, passing strategy", function (done) {
+        var lib = require('../lib');
+
+        var loaded = lib.fnc( 'file://' + __dirname +  '/./external_fnc.js', function(path) {
+            var imported = require(path);
+            return imported.test;
+        });
+
+        assert.ok(loaded);
+        assert.ok(_.isFunction(loaded) );
+
+        done();
+    });
+
 });
