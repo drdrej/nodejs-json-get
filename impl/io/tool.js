@@ -16,7 +16,7 @@ exports.exec = function( operation, options ) {
             console.log( "[TOOL] exec: " + operation );
 
             var stream = this;
-            
+
             var exec = require( '../asserts/exec.js').exec;
             exec( fnc, data, function(err) {
                 console.log( "[OPERATION] finished" );

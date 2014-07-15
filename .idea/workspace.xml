@@ -2,83 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43da5df5-e8ba-4bda-8d98-b0ce46f0483b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/.idea/.name" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/.idea/artefactjs-loader.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/.idea/encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/.idea/jsLibraryMappings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/.idea/libraries/artefactjs_loader_node_modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/.idea/scopes/scope_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/asserts/exec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/asserts/isFilePath.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/asserts/isObject.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/asserts/isTrue.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/lib.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/loader/fnc.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/loader/json.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/loader/loader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/node_modules/callsite/.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/node_modules/callsite/History.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/node_modules/callsite/Makefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/node_modules/callsite/Readme.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/node_modules/callsite/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/node_modules/callsite/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/node_modules/colors/MIT-LICENSE.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/node_modules/colors/ReadMe.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/node_modules/colors/colors.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/node_modules/colors/example.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/node_modules/colors/example.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/node_modules/colors/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/node_modules/colors/test.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/node_modules/colors/themes/winston-dark.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/node_modules/colors/themes/winston-light.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/node_modules/string/.documentup.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/node_modules/string/.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/node_modules/string/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/node_modules/string/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/node_modules/string/CNAME" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/node_modules/string/Makefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/node_modules/string/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/node_modules/string/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/node_modules/string/component.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/node_modules/string/lib/string.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/node_modules/string/lib/string.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/node_modules/string/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/node_modules/string/test/browser.test.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/node_modules/string/test/mocha.opts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/node_modules/string/test/string.test.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/node_modules/underscore/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/node_modules/underscore/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/node_modules/underscore/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/node_modules/underscore/underscore-min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/node_modules/underscore/underscore.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/test-in-process.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/test/external_fnc.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/test/test.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/test/test_load_fnc.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/artefactjs-loader/test/test_load_json.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/impl/io/op.js" afterPath="$PROJECT_DIR$/impl/io/tool.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/string/CHANGELOG.md" afterPath="$PROJECT_DIR$/node_modules/string/CHANGELOG.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/impl/Pipe.js" afterPath="$PROJECT_DIR$/impl/Pipe.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/string/README.md" afterPath="$PROJECT_DIR$/node_modules/string/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/event-stream/index.js" afterPath="$PROJECT_DIR$/node_modules/event-stream/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/event-stream/package.json" afterPath="$PROJECT_DIR$/node_modules/event-stream/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/event-stream/node_modules/pause-stream/package.json" afterPath="$PROJECT_DIR$/node_modules/event-stream/node_modules/pause-stream/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/event-stream/node_modules/split/package.json" afterPath="$PROJECT_DIR$/node_modules/event-stream/node_modules/split/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/string/package.json" afterPath="$PROJECT_DIR$/node_modules/string/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/event-stream/test/readable.asynct.js" afterPath="$PROJECT_DIR$/node_modules/event-stream/test/readable.asynct.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/event-stream/readme.markdown" afterPath="$PROJECT_DIR$/node_modules/event-stream/readme.markdown" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/string/lib/string.js" afterPath="$PROJECT_DIR$/node_modules/string/lib/string.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/string/test/string.test.js" afterPath="$PROJECT_DIR$/node_modules/string/test/string.test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_op.js" afterPath="$PROJECT_DIR$/test/test_op.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/impl/io/tool.js" afterPath="$PROJECT_DIR$/impl/io/tool.js" />
     </list>
     <ignored path="nodejs-json-get.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -104,8 +30,18 @@
       <file leaf-file-name="package.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="525">
-              <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+            <state vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="525">
+              <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.029469548" vertical-offset="105" max-vertical-offset="5880">
+              <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -141,11 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tool.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="tool.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/impl/io/tool.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.505618" vertical-offset="0" max-vertical-offset="555">
-              <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -229,17 +165,17 @@
         <option value="$PROJECT_DIR$/test/test_selectable_text.js" />
         <option value="$PROJECT_DIR$/impl/io/validate.js" />
         <option value="$PROJECT_DIR$/impl/io/pipe.js" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/impl/io/op.js" />
         <option value="$PROJECT_DIR$/impl/io/helper/useFunction.js" />
         <option value="$PROJECT_DIR$/impl/io/helper/loadFunction.js" />
         <option value="$PROJECT_DIR$/impl/io/validateV2.js" />
         <option value="$PROJECT_DIR$/impl/io/transform.js" />
         <option value="$PROJECT_DIR$/test/test_ExternalTransformation.js" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/impl/Pipe.js" />
         <option value="$PROJECT_DIR$/test/test_op.js" />
         <option value="$PROJECT_DIR$/impl/io/tool.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -512,7 +448,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.57883817" sideWeight="0.4997367" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.76763487" sideWeight="0.07951553" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41804978" sideWeight="0.9204845" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41804978" sideWeight="0.9204845" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32987553" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -813,13 +749,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.016411379" vertical-offset="105" max-vertical-offset="5880">
-          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/test_selectable_text.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
@@ -860,14 +789,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="143" max-vertical-offset="1080">
           <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="525">
-          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -930,8 +851,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/impl/io/tool.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.505618" vertical-offset="0" max-vertical-offset="555">
-          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="525">
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.029469548" vertical-offset="105" max-vertical-offset="5880">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
           <folding />
         </state>
       </provider>
